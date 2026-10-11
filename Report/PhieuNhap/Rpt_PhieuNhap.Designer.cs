@@ -120,7 +120,7 @@
             // 
             this.xrTable1.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Right) 
             | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.xrTable1.Font = new System.Drawing.Font("Tahoma", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrTable1.Font = new DevExpress.Drawing.DXFont("Tahoma", 8.5F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
             this.xrTable1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.xrTable1.Name = "xrTable1";
             this.xrTable1.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
@@ -238,7 +238,7 @@
             // 
             // lblNgayIn
             // 
-            this.lblNgayIn.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Italic);
+            this.lblNgayIn.Font = new DevExpress.Drawing.DXFont("Arial", 9F, DevExpress.Drawing.DXFontStyle.Italic);
             this.lblNgayIn.LocationFloat = new DevExpress.Utils.PointFloat(550.3333F, 0F);
             this.lblNgayIn.Multiline = true;
             this.lblNgayIn.Name = "lblNgayIn";
@@ -250,7 +250,7 @@
             // 
             // lblNgayLap
             // 
-            this.lblNgayLap.Font = new System.Drawing.Font("Tahoma", 8.5F);
+            this.lblNgayLap.Font = new DevExpress.Drawing.DXFont("Tahoma", 8.5F);
             this.lblNgayLap.LocationFloat = new DevExpress.Utils.PointFloat(414.8331F, 142F);
             this.lblNgayLap.Name = "lblNgayLap";
             this.lblNgayLap.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -261,7 +261,7 @@
             // 
             // xrLabel7
             // 
-            this.xrLabel7.Font = new System.Drawing.Font("Tahoma", 8.5F);
+            this.xrLabel7.Font = new DevExpress.Drawing.DXFont("Tahoma", 8.5F);
             this.xrLabel7.LocationFloat = new DevExpress.Utils.PointFloat(369.8332F, 142F);
             this.xrLabel7.Name = "xrLabel7";
             this.xrLabel7.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -273,7 +273,7 @@
             // 
             // lblMaHD
             // 
-            this.lblMaHD.Font = new System.Drawing.Font("Tahoma", 8.5F);
+            this.lblMaHD.Font = new DevExpress.Drawing.DXFont("Tahoma", 8.5F);
             this.lblMaHD.LocationFloat = new DevExpress.Utils.PointFloat(253.3333F, 142F);
             this.lblMaHD.Name = "lblMaHD";
             this.lblMaHD.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -284,7 +284,7 @@
             // 
             // lblDienGiai
             // 
-            this.lblDienGiai.Font = new System.Drawing.Font("Tahoma", 8.5F);
+            this.lblDienGiai.Font = new DevExpress.Drawing.DXFont("Tahoma", 8.5F);
             this.lblDienGiai.LocationFloat = new DevExpress.Utils.PointFloat(470.8334F, 205.6667F);
             this.lblDienGiai.Multiline = true;
             this.lblDienGiai.Name = "lblDienGiai";
@@ -296,7 +296,7 @@
             // 
             // xrLabel5
             // 
-            this.xrLabel5.Font = new System.Drawing.Font("Tahoma", 8.5F);
+            this.xrLabel5.Font = new DevExpress.Drawing.DXFont("Tahoma", 8.5F);
             this.xrLabel5.LocationFloat = new DevExpress.Utils.PointFloat(393.334F, 205.6667F);
             this.xrLabel5.Multiline = true;
             this.xrLabel5.Name = "xrLabel5";
@@ -309,7 +309,7 @@
             // 
             // xrLabel2
             // 
-            this.xrLabel2.Font = new System.Drawing.Font("Tahoma", 8.5F);
+            this.xrLabel2.Font = new DevExpress.Drawing.DXFont("Tahoma", 8.5F);
             this.xrLabel2.LocationFloat = new DevExpress.Utils.PointFloat(0F, 165.6667F);
             this.xrLabel2.Multiline = true;
             this.xrLabel2.Name = "xrLabel2";
@@ -322,7 +322,7 @@
             // 
             // xrLabel4
             // 
-            this.xrLabel4.Font = new System.Drawing.Font("Tahoma", 8.5F);
+            this.xrLabel4.Font = new DevExpress.Drawing.DXFont("Tahoma", 8.5F);
             this.xrLabel4.LocationFloat = new DevExpress.Utils.PointFloat(0F, 185.6667F);
             this.xrLabel4.Multiline = true;
             this.xrLabel4.Name = "xrLabel4";
@@ -335,7 +335,7 @@
             // 
             // xrLabel6
             // 
-            this.xrLabel6.Font = new System.Drawing.Font("Tahoma", 8.5F);
+            this.xrLabel6.Font = new DevExpress.Drawing.DXFont("Tahoma", 8.5F);
             this.xrLabel6.LocationFloat = new DevExpress.Utils.PointFloat(0.0006103516F, 205.6667F);
             this.xrLabel6.Multiline = true;
             this.xrLabel6.Name = "xrLabel6";
@@ -348,7 +348,7 @@
             // 
             // lbl_diengiai
             // 
-            this.lbl_diengiai.Font = new System.Drawing.Font("Tahoma", 8.5F);
+            this.lbl_diengiai.Font = new DevExpress.Drawing.DXFont("Tahoma", 8.5F);
             this.lbl_diengiai.LocationFloat = new DevExpress.Utils.PointFloat(101.0011F, 205.6667F);
             this.lbl_diengiai.Multiline = true;
             this.lbl_diengiai.Name = "lbl_diengiai";
@@ -360,7 +360,7 @@
             // 
             // lblDiaChiKH
             // 
-            this.lblDiaChiKH.Font = new System.Drawing.Font("Tahoma", 8.5F);
+            this.lblDiaChiKH.Font = new DevExpress.Drawing.DXFont("Tahoma", 8.5F);
             this.lblDiaChiKH.LocationFloat = new DevExpress.Utils.PointFloat(101.0011F, 185.6667F);
             this.lblDiaChiKH.Multiline = true;
             this.lblDiaChiKH.Name = "lblDiaChiKH";
@@ -373,7 +373,7 @@
             // 
             // lblKhachHang
             // 
-            this.lblKhachHang.Font = new System.Drawing.Font("Tahoma", 8.5F);
+            this.lblKhachHang.Font = new DevExpress.Drawing.DXFont("Tahoma", 8.5F);
             this.lblKhachHang.LocationFloat = new DevExpress.Utils.PointFloat(101.0005F, 165.6667F);
             this.lblKhachHang.Multiline = true;
             this.lblKhachHang.Name = "lblKhachHang";
@@ -386,7 +386,7 @@
             // 
             // lbl_SoCT_Ngay
             // 
-            this.lbl_SoCT_Ngay.Font = new System.Drawing.Font("Tahoma", 8.5F);
+            this.lbl_SoCT_Ngay.Font = new DevExpress.Drawing.DXFont("Tahoma", 8.5F);
             this.lbl_SoCT_Ngay.LocationFloat = new DevExpress.Utils.PointFloat(208.3333F, 142F);
             this.lbl_SoCT_Ngay.Name = "lbl_SoCT_Ngay";
             this.lbl_SoCT_Ngay.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -398,7 +398,7 @@
             // 
             // lblTieuDe
             // 
-            this.lblTieuDe.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold);
+            this.lblTieuDe.Font = new DevExpress.Drawing.DXFont("Tahoma", 18F, DevExpress.Drawing.DXFontStyle.Bold);
             this.lblTieuDe.LocationFloat = new DevExpress.Utils.PointFloat(0F, 110F);
             this.lblTieuDe.Name = "lblTieuDe";
             this.lblTieuDe.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -410,7 +410,7 @@
             // 
             // lblWebsite
             // 
-            this.lblWebsite.Font = new System.Drawing.Font("Arial", 8.5F, System.Drawing.FontStyle.Bold);
+            this.lblWebsite.Font = new DevExpress.Drawing.DXFont("Arial", 8.5F, DevExpress.Drawing.DXFontStyle.Bold);
             this.lblWebsite.LocationFloat = new DevExpress.Utils.PointFloat(0F, 72.00002F);
             this.lblWebsite.Multiline = true;
             this.lblWebsite.Name = "lblWebsite";
@@ -423,7 +423,7 @@
             // 
             // lblEmail
             // 
-            this.lblEmail.Font = new System.Drawing.Font("Arial", 8.5F, System.Drawing.FontStyle.Bold);
+            this.lblEmail.Font = new DevExpress.Drawing.DXFont("Arial", 8.5F, DevExpress.Drawing.DXFontStyle.Bold);
             this.lblEmail.LocationFloat = new DevExpress.Utils.PointFloat(0.0006103516F, 54.00002F);
             this.lblEmail.Multiline = true;
             this.lblEmail.Name = "lblEmail";
@@ -436,7 +436,7 @@
             // 
             // lblSoDT
             // 
-            this.lblSoDT.Font = new System.Drawing.Font("Arial", 8.5F, System.Drawing.FontStyle.Bold);
+            this.lblSoDT.Font = new DevExpress.Drawing.DXFont("Arial", 8.5F, DevExpress.Drawing.DXFontStyle.Bold);
             this.lblSoDT.LocationFloat = new DevExpress.Utils.PointFloat(0F, 36.00001F);
             this.lblSoDT.Multiline = true;
             this.lblSoDT.Name = "lblSoDT";
@@ -449,7 +449,7 @@
             // 
             // lblDiaChi
             // 
-            this.lblDiaChi.Font = new System.Drawing.Font("Arial", 8.5F, System.Drawing.FontStyle.Bold);
+            this.lblDiaChi.Font = new DevExpress.Drawing.DXFont("Arial", 8.5F, DevExpress.Drawing.DXFontStyle.Bold);
             this.lblDiaChi.LocationFloat = new DevExpress.Utils.PointFloat(0F, 18.00001F);
             this.lblDiaChi.Multiline = true;
             this.lblDiaChi.Name = "lblDiaChi";
@@ -462,7 +462,7 @@
             // 
             // lblTenDonVi
             // 
-            this.lblTenDonVi.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
+            this.lblTenDonVi.Font = new DevExpress.Drawing.DXFont("Arial", 9F, DevExpress.Drawing.DXFontStyle.Bold);
             this.lblTenDonVi.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.lblTenDonVi.Multiline = true;
             this.lblTenDonVi.Name = "lblTenDonVi";
@@ -495,7 +495,7 @@
             // 
             // lblDocSo
             // 
-            this.lblDocSo.Font = new System.Drawing.Font("Tahoma", 8.5F, System.Drawing.FontStyle.Italic);
+            this.lblDocSo.Font = new DevExpress.Drawing.DXFont("Tahoma", 8.5F, DevExpress.Drawing.DXFontStyle.Italic);
             this.lblDocSo.LocationFloat = new DevExpress.Utils.PointFloat(129.8334F, 18.99999F);
             this.lblDocSo.Name = "lblDocSo";
             this.lblDocSo.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -507,7 +507,7 @@
             // 
             // xrLabel1
             // 
-            this.xrLabel1.Font = new System.Drawing.Font("Tahoma", 8.5F, System.Drawing.FontStyle.Italic);
+            this.xrLabel1.Font = new DevExpress.Drawing.DXFont("Tahoma", 8.5F, DevExpress.Drawing.DXFontStyle.Italic);
             this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 18.99999F);
             this.xrLabel1.Name = "xrLabel1";
             this.xrLabel1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -519,7 +519,7 @@
             // 
             // xrLabel12
             // 
-            this.xrLabel12.Font = new System.Drawing.Font("Tahoma", 8.5F, System.Drawing.FontStyle.Bold);
+            this.xrLabel12.Font = new DevExpress.Drawing.DXFont("Tahoma", 8.5F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel12.LocationFloat = new DevExpress.Utils.PointFloat(587.4997F, 40.00001F);
             this.xrLabel12.Name = "xrLabel12";
             this.xrLabel12.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -531,7 +531,7 @@
             // 
             // xrLabel11
             // 
-            this.xrLabel11.Font = new System.Drawing.Font("Tahoma", 8.5F, System.Drawing.FontStyle.Bold);
+            this.xrLabel11.Font = new DevExpress.Drawing.DXFont("Tahoma", 8.5F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel11.LocationFloat = new DevExpress.Utils.PointFloat(444.1664F, 40.00006F);
             this.xrLabel11.Name = "xrLabel11";
             this.xrLabel11.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -543,7 +543,7 @@
             // 
             // xrLabel10
             // 
-            this.xrLabel10.Font = new System.Drawing.Font("Tahoma", 8.5F, System.Drawing.FontStyle.Bold);
+            this.xrLabel10.Font = new DevExpress.Drawing.DXFont("Tahoma", 8.5F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel10.LocationFloat = new DevExpress.Utils.PointFloat(306.3335F, 40.00001F);
             this.xrLabel10.Name = "xrLabel10";
             this.xrLabel10.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -555,7 +555,7 @@
             // 
             // xrLabel9
             // 
-            this.xrLabel9.Font = new System.Drawing.Font("Tahoma", 8.5F, System.Drawing.FontStyle.Bold);
+            this.xrLabel9.Font = new DevExpress.Drawing.DXFont("Tahoma", 8.5F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel9.LocationFloat = new DevExpress.Utils.PointFloat(154.8334F, 40.00001F);
             this.xrLabel9.Name = "xrLabel9";
             this.xrLabel9.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -567,7 +567,7 @@
             // 
             // xrLabel8
             // 
-            this.xrLabel8.Font = new System.Drawing.Font("Tahoma", 8.5F, System.Drawing.FontStyle.Bold);
+            this.xrLabel8.Font = new DevExpress.Drawing.DXFont("Tahoma", 8.5F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel8.LocationFloat = new DevExpress.Utils.PointFloat(0F, 40.00001F);
             this.xrLabel8.Name = "xrLabel8";
             this.xrLabel8.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -579,7 +579,7 @@
             // 
             // lblNgayThang
             // 
-            this.lblNgayThang.Font = new System.Drawing.Font("Tahoma", 8.5F);
+            this.lblNgayThang.Font = new DevExpress.Drawing.DXFont("Tahoma", 8.5F);
             this.lblNgayThang.LocationFloat = new DevExpress.Utils.PointFloat(530.7738F, 0F);
             this.lblNgayThang.Name = "lblNgayThang";
             this.lblNgayThang.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -601,7 +601,7 @@
             this.XrTable2.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
             | DevExpress.XtraPrinting.BorderSide.Right) 
             | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.XrTable2.Font = new System.Drawing.Font("Tahoma", 8.5F, System.Drawing.FontStyle.Bold);
+            this.XrTable2.Font = new DevExpress.Drawing.DXFont("Tahoma", 8.5F, DevExpress.Drawing.DXFontStyle.Bold);
             this.XrTable2.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.XrTable2.Name = "XrTable2";
             this.XrTable2.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
@@ -710,7 +710,7 @@
             this.xrTable3.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
             | DevExpress.XtraPrinting.BorderSide.Right) 
             | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.xrTable3.Font = new System.Drawing.Font("Tahoma", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrTable3.Font = new DevExpress.Drawing.DXFont("Tahoma", 8.5F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
             this.xrTable3.LocationFloat = new DevExpress.Utils.PointFloat(0.0006103516F, 0F);
             this.xrTable3.Name = "xrTable3";
             this.xrTable3.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
@@ -732,7 +732,7 @@
             // 
             this.xrTableCell1.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Right) 
             | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.xrTableCell1.Font = new System.Drawing.Font("Tahoma", 8.5F, System.Drawing.FontStyle.Bold);
+            this.xrTableCell1.Font = new DevExpress.Drawing.DXFont("Tahoma", 8.5F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrTableCell1.Name = "xrTableCell1";
             this.xrTableCell1.Padding = new DevExpress.XtraPrinting.PaddingInfo(4, 5, 0, 0, 100F);
             this.xrTableCell1.StylePriority.UseBorders = false;
@@ -747,7 +747,7 @@
             // 
             this.colTongSL.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Right) 
             | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.colTongSL.Font = new System.Drawing.Font("Tahoma", 8.5F, System.Drawing.FontStyle.Bold);
+            this.colTongSL.Font = new DevExpress.Drawing.DXFont("Tahoma", 8.5F, DevExpress.Drawing.DXFontStyle.Bold);
             this.colTongSL.Multiline = true;
             this.colTongSL.Name = "colTongSL";
             this.colTongSL.Padding = new DevExpress.XtraPrinting.PaddingInfo(4, 5, 0, 0, 100F);
@@ -762,7 +762,7 @@
             // colTongThanhTien
             // 
             this.colTongThanhTien.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Right | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.colTongThanhTien.Font = new System.Drawing.Font("Tahoma", 8.5F, System.Drawing.FontStyle.Bold);
+            this.colTongThanhTien.Font = new DevExpress.Drawing.DXFont("Tahoma", 8.5F, DevExpress.Drawing.DXFontStyle.Bold);
             this.colTongThanhTien.Multiline = true;
             this.colTongThanhTien.Name = "colTongThanhTien";
             this.colTongThanhTien.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 5, 0, 0, 100F);
@@ -779,7 +779,7 @@
             // 
             // lbl_MST
             // 
-            this.lbl_MST.Font = new System.Drawing.Font("Arial", 8.5F, System.Drawing.FontStyle.Bold);
+            this.lbl_MST.Font = new DevExpress.Drawing.DXFont("Arial", 8.5F, DevExpress.Drawing.DXFontStyle.Bold);
             this.lbl_MST.LocationFloat = new DevExpress.Utils.PointFloat(0F, 90.00002F);
             this.lbl_MST.Multiline = true;
             this.lbl_MST.Name = "lbl_MST";
@@ -792,7 +792,7 @@
             // 
             // xrLabel17
             // 
-            this.xrLabel17.Font = new System.Drawing.Font("Tahoma", 7F);
+            this.xrLabel17.Font = new DevExpress.Drawing.DXFont("Tahoma", 7F);
             this.xrLabel17.LocationFloat = new DevExpress.Utils.PointFloat(587.4996F, 55.00001F);
             this.xrLabel17.Multiline = true;
             this.xrLabel17.Name = "xrLabel17";
@@ -805,7 +805,7 @@
             // 
             // xrLabel3
             // 
-            this.xrLabel3.Font = new System.Drawing.Font("Tahoma", 7F);
+            this.xrLabel3.Font = new DevExpress.Drawing.DXFont("Tahoma", 7F);
             this.xrLabel3.LocationFloat = new DevExpress.Utils.PointFloat(444.1665F, 55.00001F);
             this.xrLabel3.Multiline = true;
             this.xrLabel3.Name = "xrLabel3";
@@ -818,7 +818,7 @@
             // 
             // xrLabel13
             // 
-            this.xrLabel13.Font = new System.Drawing.Font("Tahoma", 7F);
+            this.xrLabel13.Font = new DevExpress.Drawing.DXFont("Tahoma", 7F);
             this.xrLabel13.LocationFloat = new DevExpress.Utils.PointFloat(306.3335F, 55.00001F);
             this.xrLabel13.Multiline = true;
             this.xrLabel13.Name = "xrLabel13";
@@ -831,7 +831,7 @@
             // 
             // xrLabel14
             // 
-            this.xrLabel14.Font = new System.Drawing.Font("Tahoma", 7F);
+            this.xrLabel14.Font = new DevExpress.Drawing.DXFont("Tahoma", 7F);
             this.xrLabel14.LocationFloat = new DevExpress.Utils.PointFloat(154.8334F, 55.00001F);
             this.xrLabel14.Multiline = true;
             this.xrLabel14.Name = "xrLabel14";
@@ -844,7 +844,7 @@
             // 
             // xrLabel15
             // 
-            this.xrLabel15.Font = new System.Drawing.Font("Tahoma", 7F);
+            this.xrLabel15.Font = new DevExpress.Drawing.DXFont("Tahoma", 7F);
             this.xrLabel15.LocationFloat = new DevExpress.Utils.PointFloat(0.0005849202F, 55.00001F);
             this.xrLabel15.Multiline = true;
             this.xrLabel15.Name = "xrLabel15";
@@ -857,7 +857,7 @@
             // 
             // lbl_NguoiDaiDien
             // 
-            this.lbl_NguoiDaiDien.Font = new System.Drawing.Font("Tahoma", 8.5F, System.Drawing.FontStyle.Bold);
+            this.lbl_NguoiDaiDien.Font = new DevExpress.Drawing.DXFont("Tahoma", 8.5F, DevExpress.Drawing.DXFontStyle.Bold);
             this.lbl_NguoiDaiDien.LocationFloat = new DevExpress.Utils.PointFloat(587.4996F, 136.1666F);
             this.lbl_NguoiDaiDien.Name = "lbl_NguoiDaiDien";
             this.lbl_NguoiDaiDien.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -878,11 +878,11 @@
             this.PageHeader,
             this.PageFooter,
             this.GroupFooter1});
-            this.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.Margins = new System.Drawing.Printing.Margins(48, 42, 22, 23);
+            this.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F);
+            this.Margins = new DevExpress.Drawing.DXMargins(48, 42, 22, 23);
             this.PageHeight = 1169;
             this.PageWidth = 827;
-            this.PaperKind = System.Drawing.Printing.PaperKind.A4;
+            this.PaperKind = DevExpress.Drawing.Printing.DXPaperKind.A4;
             this.Version = "21.2";
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.XrTable2)).EndInit();

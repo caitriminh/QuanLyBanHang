@@ -36,7 +36,7 @@ namespace VisualStudio2019.Report
             lbl_MST.Text= "MST: " + dt.Rows[0]["MST"].ToString();
             lbl_NguoiDaiDien.Text = dt.Rows[0]["NguoiDaiDien"].ToString();
             /////////////////////////////////////////////////////////////////////
-            lblNgayIn.Text = DateTime.Now.ToString();
+            lblNgayIn.Text ="Ngày in: " + DateTime.Now.ToString();
             lblNgayThang.Text = "Ngày   " + Convert.ToDateTime(Form_Template.dtReport.Rows[0]["NgayLap"]).Day + "   tháng   " + Convert.ToDateTime(Form_Template.dtReport.Rows[0]["NgayLap"]).Month + "  năm  " + Convert.ToDateTime(Form_Template.dtReport.Rows[0]["NgayLap"]).Year;
             lblMaHD.Text = Form_Template.dtReport.Rows[0]["MaHoaDon"].ToString();
             lblNgayLap.Text = Convert.ToDateTime( Form_Template.dtReport.Rows[0]["NgayLap"]).ToString("dd/MM/yyyy");

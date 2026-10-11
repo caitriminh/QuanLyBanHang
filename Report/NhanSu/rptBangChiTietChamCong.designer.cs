@@ -89,7 +89,7 @@
             // XrTable2
             // 
             this.XrTable2.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Top | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.XrTable2.Font = new System.Drawing.Font("Tahoma", 8F);
+            this.XrTable2.Font = new DevExpress.Drawing.DXFont("Tahoma", 8F);
             this.XrTable2.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.XrTable2.Name = "XrTable2";
             this.XrTable2.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
@@ -224,7 +224,7 @@
             // 
             // col_TenNhanVien
             // 
-            this.col_TenNhanVien.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.col_TenNhanVien.Font = new DevExpress.Drawing.DXFont("Tahoma", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.col_TenNhanVien.LocationFloat = new DevExpress.Utils.PointFloat(69.50022F, 125.9999F);
             this.col_TenNhanVien.Name = "col_TenNhanVien";
             this.col_TenNhanVien.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -236,7 +236,7 @@
             // 
             // col_PhongBan
             // 
-            this.col_PhongBan.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.col_PhongBan.Font = new DevExpress.Drawing.DXFont("Tahoma", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.col_PhongBan.LocationFloat = new DevExpress.Utils.PointFloat(69.50022F, 145.9999F);
             this.col_PhongBan.Name = "col_PhongBan";
             this.col_PhongBan.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -248,7 +248,7 @@
             // 
             // col_ChucVu
             // 
-            this.col_ChucVu.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.col_ChucVu.Font = new DevExpress.Drawing.DXFont("Tahoma", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.col_ChucVu.LocationFloat = new DevExpress.Utils.PointFloat(69.50022F, 165.9999F);
             this.col_ChucVu.Name = "col_ChucVu";
             this.col_ChucVu.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -260,7 +260,7 @@
             // 
             // xrLabel5
             // 
-            this.xrLabel5.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.xrLabel5.Font = new DevExpress.Drawing.DXFont("Tahoma", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel5.LocationFloat = new DevExpress.Utils.PointFloat(0.003458659F, 165.9999F);
             this.xrLabel5.Name = "xrLabel5";
             this.xrLabel5.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -272,7 +272,7 @@
             // 
             // xrLabel3
             // 
-            this.xrLabel3.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.xrLabel3.Font = new DevExpress.Drawing.DXFont("Tahoma", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel3.LocationFloat = new DevExpress.Utils.PointFloat(0.003458659F, 145.9999F);
             this.xrLabel3.Name = "xrLabel3";
             this.xrLabel3.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -284,7 +284,7 @@
             // 
             // xrLabel1
             // 
-            this.xrLabel1.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.xrLabel1.Font = new DevExpress.Drawing.DXFont("Tahoma", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(0.003458659F, 125.9999F);
             this.xrLabel1.Name = "xrLabel1";
             this.xrLabel1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -297,7 +297,7 @@
             // xrTable1
             // 
             this.xrTable1.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Top | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.xrTable1.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.xrTable1.Font = new DevExpress.Drawing.DXFont("Tahoma", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrTable1.LocationFloat = new DevExpress.Utils.PointFloat(0.003433228F, 190.1666F);
             this.xrTable1.Name = "xrTable1";
             this.xrTable1.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
@@ -399,14 +399,14 @@
             // 
             // xrLine1
             // 
-            this.xrLine1.LineStyle = System.Drawing.Drawing2D.DashStyle.Dot;
+            this.xrLine1.LineStyle = DevExpress.Drawing.DXDashStyle.Dot;
             this.xrLine1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 60.99997F);
             this.xrLine1.Name = "xrLine1";
             this.xrLine1.SizeF = new System.Drawing.SizeF(527F, 9.999996F);
             // 
             // lbl_ngaylap
             // 
-            this.lbl_ngaylap.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_ngaylap.Font = new DevExpress.Drawing.DXFont("Tahoma", 11F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
             this.lbl_ngaylap.LocationFloat = new DevExpress.Utils.PointFloat(0.003433228F, 97.99991F);
             this.lbl_ngaylap.Name = "lbl_ngaylap";
             this.lbl_ngaylap.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -418,7 +418,7 @@
             // 
             // xrLabel4
             // 
-            this.xrLabel4.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold);
+            this.xrLabel4.Font = new DevExpress.Drawing.DXFont("Tahoma", 14F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel4.LocationFloat = new DevExpress.Utils.PointFloat(0F, 72.99994F);
             this.xrLabel4.Name = "xrLabel4";
             this.xrLabel4.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -430,7 +430,7 @@
             // 
             // lbl_sodt_sofax
             // 
-            this.lbl_sodt_sofax.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.lbl_sodt_sofax.Font = new DevExpress.Drawing.DXFont("Tahoma", 9F);
             this.lbl_sodt_sofax.LocationFloat = new DevExpress.Utils.PointFloat(0.003331502F, 41.00002F);
             this.lbl_sodt_sofax.Name = "lbl_sodt_sofax";
             this.lbl_sodt_sofax.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -442,7 +442,7 @@
             // 
             // xrLabel2
             // 
-            this.xrLabel2.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.xrLabel2.Font = new DevExpress.Drawing.DXFont("Tahoma", 9F);
             this.xrLabel2.LocationFloat = new DevExpress.Utils.PointFloat(0F, 21.00002F);
             this.xrLabel2.Name = "xrLabel2";
             this.xrLabel2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -454,7 +454,7 @@
             // 
             // lbl_tencty
             // 
-            this.lbl_tencty.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+            this.lbl_tencty.Font = new DevExpress.Drawing.DXFont("Tahoma", 9F, DevExpress.Drawing.DXFontStyle.Bold);
             this.lbl_tencty.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.lbl_tencty.Name = "lbl_tencty";
             this.lbl_tencty.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -476,7 +476,7 @@
             // xrTable3
             // 
             this.xrTable3.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Top | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.xrTable3.Font = new System.Drawing.Font("Tahoma", 8F);
+            this.xrTable3.Font = new DevExpress.Drawing.DXFont("Tahoma", 8F);
             this.xrTable3.LocationFloat = new DevExpress.Utils.PointFloat(0.003433228F, 0F);
             this.xrTable3.Name = "xrTable3";
             this.xrTable3.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
@@ -499,7 +499,7 @@
             // xrTableCell13
             // 
             this.xrTableCell13.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Top | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.xrTableCell13.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.xrTableCell13.Font = new DevExpress.Drawing.DXFont("Tahoma", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrTableCell13.Multiline = true;
             this.xrTableCell13.Name = "xrTableCell13";
             this.xrTableCell13.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 5, 0, 0, 100F);
@@ -514,7 +514,7 @@
             // col_TongCong100
             // 
             this.col_TongCong100.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Top | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.col_TongCong100.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.col_TongCong100.Font = new DevExpress.Drawing.DXFont("Tahoma", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.col_TongCong100.Multiline = true;
             this.col_TongCong100.Name = "col_TongCong100";
             this.col_TongCong100.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 5, 0, 0, 100F);
@@ -529,7 +529,7 @@
             // col_TongCongTangCa
             // 
             this.col_TongCongTangCa.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Top | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.col_TongCongTangCa.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.col_TongCongTangCa.Font = new DevExpress.Drawing.DXFont("Tahoma", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.col_TongCongTangCa.Multiline = true;
             this.col_TongCongTangCa.Name = "col_TongCongTangCa";
             this.col_TongCongTangCa.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 5, 0, 0, 100F);
@@ -544,7 +544,7 @@
             // col_TongTongCong
             // 
             this.col_TongTongCong.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Top | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.col_TongTongCong.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.col_TongTongCong.Font = new DevExpress.Drawing.DXFont("Tahoma", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.col_TongTongCong.Multiline = true;
             this.col_TongTongCong.Name = "col_TongTongCong";
             this.col_TongTongCong.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 5, 0, 0, 100F);
@@ -558,7 +558,7 @@
             // 
             // lbl_TenNhanVien
             // 
-            this.lbl_TenNhanVien.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+            this.lbl_TenNhanVien.Font = new DevExpress.Drawing.DXFont("Tahoma", 9F, DevExpress.Drawing.DXFontStyle.Bold);
             this.lbl_TenNhanVien.LocationFloat = new DevExpress.Utils.PointFloat(321.5833F, 98.54147F);
             this.lbl_TenNhanVien.Name = "lbl_TenNhanVien";
             this.lbl_TenNhanVien.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -570,7 +570,7 @@
             // 
             // xrLabel7
             // 
-            this.xrLabel7.Font = new System.Drawing.Font("Tahoma", 8.5F);
+            this.xrLabel7.Font = new DevExpress.Drawing.DXFont("Tahoma", 8.5F);
             this.xrLabel7.LocationFloat = new DevExpress.Utils.PointFloat(321.5833F, 20.99996F);
             this.xrLabel7.Multiline = true;
             this.xrLabel7.Name = "xrLabel7";
@@ -609,7 +609,7 @@
             // col_TongGioTangCa
             // 
             this.col_TongGioTangCa.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Top | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.col_TongGioTangCa.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.col_TongGioTangCa.Font = new DevExpress.Drawing.DXFont("Tahoma", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.col_TongGioTangCa.Multiline = true;
             this.col_TongGioTangCa.Name = "col_TongGioTangCa";
             this.col_TongGioTangCa.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 5, 0, 0, 100F);
@@ -629,10 +629,10 @@
             this.BottomMargin,
             this.ReportHeader,
             this.ReportFooter});
-            this.Margins = new System.Drawing.Printing.Margins(33, 23, 21, 30);
+            this.Margins = new DevExpress.Drawing.DXMargins(33, 23, 21, 30);
             this.PageHeight = 827;
             this.PageWidth = 583;
-            this.PaperKind = System.Drawing.Printing.PaperKind.A5;
+            this.PaperKind = DevExpress.Drawing.Printing.DXPaperKind.A5;
             this.Version = "21.2";
             ((System.ComponentModel.ISupportInitialize)(this.XrTable2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).EndInit();

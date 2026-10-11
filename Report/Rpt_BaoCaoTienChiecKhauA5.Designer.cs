@@ -41,10 +41,12 @@
             this.colDonGia = new DevExpress.XtraReports.UI.XRTableCell();
             this.colSoLuong = new DevExpress.XtraReports.UI.XRTableCell();
             this.colChiecKhau = new DevExpress.XtraReports.UI.XRTableCell();
+            this.colThanhTienTT = new DevExpress.XtraReports.UI.XRTableCell();
             this.colThanhTien = new DevExpress.XtraReports.UI.XRTableCell();
             this.colTienChiecKhau = new DevExpress.XtraReports.UI.XRTableCell();
             this.colThanhToan = new DevExpress.XtraReports.UI.XRTableCell();
             this.ReportHeader = new DevExpress.XtraReports.UI.ReportHeaderBand();
+            this.LblFromDateToDate = new DevExpress.XtraReports.UI.XRLabel();
             this.lbl_TenKhachHang = new DevExpress.XtraReports.UI.XRLabel();
             this.lbl_DCKhachHang = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel4 = new DevExpress.XtraReports.UI.XRLabel();
@@ -53,7 +55,6 @@
             this.lblNgayIn = new DevExpress.XtraReports.UI.XRLabel();
             this.XrLabel3 = new DevExpress.XtraReports.UI.XRLabel();
             this.lblWebsite = new DevExpress.XtraReports.UI.XRLabel();
-            this.lblEmail = new DevExpress.XtraReports.UI.XRLabel();
             this.lblSoDT = new DevExpress.XtraReports.UI.XRLabel();
             this.lblDiaChi = new DevExpress.XtraReports.UI.XRLabel();
             this.lblTenDonVi = new DevExpress.XtraReports.UI.XRLabel();
@@ -70,6 +71,7 @@
             this.colTongSoLuong = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell12 = new DevExpress.XtraReports.UI.XRTableCell();
             this.colTongThanhTienTT = new DevExpress.XtraReports.UI.XRTableCell();
+            this.colTongThanhTienST = new DevExpress.XtraReports.UI.XRTableCell();
             this.colTongTienCK = new DevExpress.XtraReports.UI.XRTableCell();
             this.colTongThanhToan = new DevExpress.XtraReports.UI.XRTableCell();
             this.PageHeader = new DevExpress.XtraReports.UI.PageHeaderBand();
@@ -82,15 +84,13 @@
             this.XrTableCell10 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell5 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell9 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableCell11 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell2 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell1 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell7 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             this.applicationMenu1 = new DevExpress.XtraBars.Ribbon.ApplicationMenu(this.components);
             this.xtraTabbedMdiManager2 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
-            this.xrTableCell11 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.colThanhTienTT = new DevExpress.XtraReports.UI.XRTableCell();
-            this.colTongThanhTienST = new DevExpress.XtraReports.UI.XRTableCell();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.XrTable2)).BeginInit();
@@ -119,7 +119,8 @@
             // xrTable1
             // 
             this.xrTable1.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.xrTable1.Font = new System.Drawing.Font("Tahoma", 7.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrTable1.Font = new DevExpress.Drawing.DXFont("Tahoma", 7.5F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {
+            new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
             this.xrTable1.LocationFloat = new DevExpress.Utils.PointFloat(1.536662F, 0F);
             this.xrTable1.Name = "xrTable1";
             this.xrTable1.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
@@ -228,6 +229,19 @@
             this.colChiecKhau.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             this.colChiecKhau.Weight = 0.66092486422465346D;
             // 
+            // colThanhTienTT
+            // 
+            this.colThanhTienTT.Borders = DevExpress.XtraPrinting.BorderSide.Top;
+            this.colThanhTienTT.Multiline = true;
+            this.colThanhTienTT.Name = "colThanhTienTT";
+            this.colThanhTienTT.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 5, 0, 0, 100F);
+            this.colThanhTienTT.StylePriority.UseBorders = false;
+            this.colThanhTienTT.StylePriority.UsePadding = false;
+            this.colThanhTienTT.StylePriority.UseTextAlignment = false;
+            this.colThanhTienTT.Text = "colThanhTienTT";
+            this.colThanhTienTT.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
+            this.colThanhTienTT.Weight = 1.6523125572208375D;
+            // 
             // colThanhTien
             // 
             this.colThanhTien.Borders = DevExpress.XtraPrinting.BorderSide.Top;
@@ -267,6 +281,7 @@
             // ReportHeader
             // 
             this.ReportHeader.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.LblFromDateToDate,
             this.lbl_TenKhachHang,
             this.lbl_DCKhachHang,
             this.xrLabel4,
@@ -275,17 +290,29 @@
             this.lblNgayIn,
             this.XrLabel3,
             this.lblWebsite,
-            this.lblEmail,
             this.lblSoDT,
             this.lblDiaChi,
             this.lblTenDonVi});
-            this.ReportHeader.HeightF = 184.1667F;
+            this.ReportHeader.HeightF = 198.1667F;
             this.ReportHeader.Name = "ReportHeader";
+            // 
+            // LblFromDateToDate
+            // 
+            this.LblFromDateToDate.Font = new DevExpress.Drawing.DXFont("Arial", 7.5F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.LblFromDateToDate.LocationFloat = new DevExpress.Utils.PointFloat(3.036202F, 141F);
+            this.LblFromDateToDate.Multiline = true;
+            this.LblFromDateToDate.Name = "LblFromDateToDate";
+            this.LblFromDateToDate.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.LblFromDateToDate.SizeF = new System.Drawing.SizeF(786.9637F, 18F);
+            this.LblFromDateToDate.StylePriority.UseFont = false;
+            this.LblFromDateToDate.StylePriority.UseTextAlignment = false;
+            this.LblFromDateToDate.Text = "Website: caitriminh.com.vn";
+            this.LblFromDateToDate.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             // 
             // lbl_TenKhachHang
             // 
-            this.lbl_TenKhachHang.Font = new System.Drawing.Font("Arial", 7.5F, System.Drawing.FontStyle.Bold);
-            this.lbl_TenKhachHang.LocationFloat = new DevExpress.Utils.PointFloat(93.99967F, 141F);
+            this.lbl_TenKhachHang.Font = new DevExpress.Drawing.DXFont("Arial", 7.5F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.lbl_TenKhachHang.LocationFloat = new DevExpress.Utils.PointFloat(93.99967F, 162.1667F);
             this.lbl_TenKhachHang.Multiline = true;
             this.lbl_TenKhachHang.Name = "lbl_TenKhachHang";
             this.lbl_TenKhachHang.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -297,8 +324,8 @@
             // 
             // lbl_DCKhachHang
             // 
-            this.lbl_DCKhachHang.Font = new System.Drawing.Font("Arial", 7.5F, System.Drawing.FontStyle.Bold);
-            this.lbl_DCKhachHang.LocationFloat = new DevExpress.Utils.PointFloat(93.99967F, 159F);
+            this.lbl_DCKhachHang.Font = new DevExpress.Drawing.DXFont("Arial", 7.5F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.lbl_DCKhachHang.LocationFloat = new DevExpress.Utils.PointFloat(93.99967F, 180.1667F);
             this.lbl_DCKhachHang.Multiline = true;
             this.lbl_DCKhachHang.Name = "lbl_DCKhachHang";
             this.lbl_DCKhachHang.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -310,8 +337,8 @@
             // 
             // xrLabel4
             // 
-            this.xrLabel4.Font = new System.Drawing.Font("Arial", 7.5F, System.Drawing.FontStyle.Bold);
-            this.xrLabel4.LocationFloat = new DevExpress.Utils.PointFloat(3.036194F, 159F);
+            this.xrLabel4.Font = new DevExpress.Drawing.DXFont("Arial", 7.5F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.xrLabel4.LocationFloat = new DevExpress.Utils.PointFloat(3.036194F, 180.1667F);
             this.xrLabel4.Multiline = true;
             this.xrLabel4.Name = "xrLabel4";
             this.xrLabel4.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -323,8 +350,8 @@
             // 
             // xrLabel1
             // 
-            this.xrLabel1.Font = new System.Drawing.Font("Arial", 7.5F, System.Drawing.FontStyle.Bold);
-            this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(1.536662F, 141F);
+            this.xrLabel1.Font = new DevExpress.Drawing.DXFont("Arial", 7.5F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(1.536662F, 162.1667F);
             this.xrLabel1.Multiline = true;
             this.xrLabel1.Name = "xrLabel1";
             this.xrLabel1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -336,8 +363,8 @@
             // 
             // lbl_MST
             // 
-            this.lbl_MST.Font = new System.Drawing.Font("Arial", 7.5F, System.Drawing.FontStyle.Bold);
-            this.lbl_MST.LocationFloat = new DevExpress.Utils.PointFloat(0F, 90.00002F);
+            this.lbl_MST.Font = new DevExpress.Drawing.DXFont("Arial", 7.5F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.lbl_MST.LocationFloat = new DevExpress.Utils.PointFloat(0F, 71.99999F);
             this.lbl_MST.Multiline = true;
             this.lbl_MST.Name = "lbl_MST";
             this.lbl_MST.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -349,7 +376,7 @@
             // 
             // lblNgayIn
             // 
-            this.lblNgayIn.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Italic);
+            this.lblNgayIn.Font = new DevExpress.Drawing.DXFont("Arial", 8F, DevExpress.Drawing.DXFontStyle.Italic);
             this.lblNgayIn.LocationFloat = new DevExpress.Utils.PointFloat(571.8434F, 0F);
             this.lblNgayIn.Multiline = true;
             this.lblNgayIn.Name = "lblNgayIn";
@@ -361,7 +388,7 @@
             // 
             // XrLabel3
             // 
-            this.XrLabel3.Font = new System.Drawing.Font("Tahoma", 16F, System.Drawing.FontStyle.Bold);
+            this.XrLabel3.Font = new DevExpress.Drawing.DXFont("Tahoma", 16F, DevExpress.Drawing.DXFontStyle.Bold);
             this.XrLabel3.LocationFloat = new DevExpress.Utils.PointFloat(0F, 109F);
             this.XrLabel3.Name = "XrLabel3";
             this.XrLabel3.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -373,8 +400,8 @@
             // 
             // lblWebsite
             // 
-            this.lblWebsite.Font = new System.Drawing.Font("Arial", 7.5F, System.Drawing.FontStyle.Bold);
-            this.lblWebsite.LocationFloat = new DevExpress.Utils.PointFloat(0F, 72.00002F);
+            this.lblWebsite.Font = new DevExpress.Drawing.DXFont("Arial", 7.5F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.lblWebsite.LocationFloat = new DevExpress.Utils.PointFloat(0F, 54.00001F);
             this.lblWebsite.Multiline = true;
             this.lblWebsite.Name = "lblWebsite";
             this.lblWebsite.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -384,22 +411,9 @@
             this.lblWebsite.Text = "Website: caitriminh.com.vn";
             this.lblWebsite.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             // 
-            // lblEmail
-            // 
-            this.lblEmail.Font = new System.Drawing.Font("Arial", 7.5F, System.Drawing.FontStyle.Bold);
-            this.lblEmail.LocationFloat = new DevExpress.Utils.PointFloat(0.0006103516F, 54.00002F);
-            this.lblEmail.Multiline = true;
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.lblEmail.SizeF = new System.Drawing.SizeF(457.5F, 17.99999F);
-            this.lblEmail.StylePriority.UseFont = false;
-            this.lblEmail.StylePriority.UseTextAlignment = false;
-            this.lblEmail.Text = "Email: caitriminh@gmail.com";
-            this.lblEmail.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
-            // 
             // lblSoDT
             // 
-            this.lblSoDT.Font = new System.Drawing.Font("Arial", 7.5F, System.Drawing.FontStyle.Bold);
+            this.lblSoDT.Font = new DevExpress.Drawing.DXFont("Arial", 7.5F, DevExpress.Drawing.DXFontStyle.Bold);
             this.lblSoDT.LocationFloat = new DevExpress.Utils.PointFloat(0F, 36.00001F);
             this.lblSoDT.Multiline = true;
             this.lblSoDT.Name = "lblSoDT";
@@ -412,7 +426,7 @@
             // 
             // lblDiaChi
             // 
-            this.lblDiaChi.Font = new System.Drawing.Font("Arial", 7.5F, System.Drawing.FontStyle.Bold);
+            this.lblDiaChi.Font = new DevExpress.Drawing.DXFont("Arial", 7.5F, DevExpress.Drawing.DXFontStyle.Bold);
             this.lblDiaChi.LocationFloat = new DevExpress.Utils.PointFloat(0F, 18.00001F);
             this.lblDiaChi.Multiline = true;
             this.lblDiaChi.Name = "lblDiaChi";
@@ -425,7 +439,7 @@
             // 
             // lblTenDonVi
             // 
-            this.lblTenDonVi.Font = new System.Drawing.Font("Arial", 7.5F, System.Drawing.FontStyle.Bold);
+            this.lblTenDonVi.Font = new DevExpress.Drawing.DXFont("Arial", 7.5F, DevExpress.Drawing.DXFontStyle.Bold);
             this.lblTenDonVi.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.lblTenDonVi.Multiline = true;
             this.lblTenDonVi.Name = "lblTenDonVi";
@@ -451,7 +465,7 @@
             // 
             // lbl_NguoiDaiDien
             // 
-            this.lbl_NguoiDaiDien.Font = new System.Drawing.Font("Tahoma", 8.5F, System.Drawing.FontStyle.Bold);
+            this.lbl_NguoiDaiDien.Font = new DevExpress.Drawing.DXFont("Tahoma", 8.5F, DevExpress.Drawing.DXFontStyle.Bold);
             this.lbl_NguoiDaiDien.LocationFloat = new DevExpress.Utils.PointFloat(571.8427F, 145.9999F);
             this.lbl_NguoiDaiDien.Name = "lbl_NguoiDaiDien";
             this.lbl_NguoiDaiDien.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -463,7 +477,7 @@
             // 
             // xrLabel12
             // 
-            this.xrLabel12.Font = new System.Drawing.Font("Tahoma", 8.5F, System.Drawing.FontStyle.Bold);
+            this.xrLabel12.Font = new DevExpress.Drawing.DXFont("Tahoma", 8.5F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel12.LocationFloat = new DevExpress.Utils.PointFloat(571.8434F, 54.00004F);
             this.xrLabel12.Name = "xrLabel12";
             this.xrLabel12.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -475,7 +489,7 @@
             // 
             // xrLabel17
             // 
-            this.xrLabel17.Font = new System.Drawing.Font("Tahoma", 7F);
+            this.xrLabel17.Font = new DevExpress.Drawing.DXFont("Tahoma", 7F);
             this.xrLabel17.LocationFloat = new DevExpress.Utils.PointFloat(571.8427F, 71.00006F);
             this.xrLabel17.Multiline = true;
             this.xrLabel17.Name = "xrLabel17";
@@ -488,7 +502,7 @@
             // 
             // lblNgayThang
             // 
-            this.lblNgayThang.Font = new System.Drawing.Font("Tahoma", 8.5F);
+            this.lblNgayThang.Font = new DevExpress.Drawing.DXFont("Tahoma", 8.5F);
             this.lblNgayThang.LocationFloat = new DevExpress.Utils.PointFloat(571.8434F, 32.99998F);
             this.lblNgayThang.Name = "lblNgayThang";
             this.lblNgayThang.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -500,7 +514,7 @@
             // 
             // lblGhiChu
             // 
-            this.lblGhiChu.Font = new System.Drawing.Font("Tahoma", 7.5F, System.Drawing.FontStyle.Bold);
+            this.lblGhiChu.Font = new DevExpress.Drawing.DXFont("Tahoma", 7.5F, DevExpress.Drawing.DXFontStyle.Bold);
             this.lblGhiChu.LocationFloat = new DevExpress.Utils.PointFloat(3.036194F, 42.99998F);
             this.lblGhiChu.Name = "lblGhiChu";
             this.lblGhiChu.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -512,8 +526,8 @@
             // 
             // xrLabel2
             // 
-            this.xrLabel2.Font = new System.Drawing.Font("Tahoma", 7.5F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
-                | System.Drawing.FontStyle.Underline))));
+            this.xrLabel2.Font = new DevExpress.Drawing.DXFont("Tahoma", 7.5F, ((DevExpress.Drawing.DXFontStyle)(((DevExpress.Drawing.DXFontStyle.Bold | DevExpress.Drawing.DXFontStyle.Italic) 
+                | DevExpress.Drawing.DXFontStyle.Underline))));
             this.xrLabel2.LocationFloat = new DevExpress.Utils.PointFloat(0F, 22.00002F);
             this.xrLabel2.Name = "xrLabel2";
             this.xrLabel2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -526,7 +540,8 @@
             // xrTable4
             // 
             this.xrTable4.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Top | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.xrTable4.Font = new System.Drawing.Font("Tahoma", 7.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrTable4.Font = new DevExpress.Drawing.DXFont("Tahoma", 7.5F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {
+            new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
             this.xrTable4.LocationFloat = new DevExpress.Utils.PointFloat(0.0006103516F, 0F);
             this.xrTable4.Name = "xrTable4";
             this.xrTable4.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
@@ -551,7 +566,7 @@
             // xrTableCell3
             // 
             this.xrTableCell3.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Top | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.xrTableCell3.Font = new System.Drawing.Font("Tahoma", 7.5F, System.Drawing.FontStyle.Bold);
+            this.xrTableCell3.Font = new DevExpress.Drawing.DXFont("Tahoma", 7.5F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrTableCell3.Name = "xrTableCell3";
             this.xrTableCell3.Padding = new DevExpress.XtraPrinting.PaddingInfo(4, 0, 0, 0, 100F);
             this.xrTableCell3.StylePriority.UseBorders = false;
@@ -565,7 +580,7 @@
             // colTongSoLuong
             // 
             this.colTongSoLuong.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Top | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.colTongSoLuong.Font = new System.Drawing.Font("Tahoma", 7.5F, System.Drawing.FontStyle.Bold);
+            this.colTongSoLuong.Font = new DevExpress.Drawing.DXFont("Tahoma", 7.5F, DevExpress.Drawing.DXFontStyle.Bold);
             this.colTongSoLuong.Multiline = true;
             this.colTongSoLuong.Name = "colTongSoLuong";
             this.colTongSoLuong.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
@@ -579,7 +594,7 @@
             // xrTableCell12
             // 
             this.xrTableCell12.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Top | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.xrTableCell12.Font = new System.Drawing.Font("Tahoma", 8.5F, System.Drawing.FontStyle.Bold);
+            this.xrTableCell12.Font = new DevExpress.Drawing.DXFont("Tahoma", 8.5F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrTableCell12.Multiline = true;
             this.xrTableCell12.Name = "xrTableCell12";
             this.xrTableCell12.Padding = new DevExpress.XtraPrinting.PaddingInfo(4, 0, 0, 0, 100F);
@@ -594,21 +609,37 @@
             // colTongThanhTienTT
             // 
             this.colTongThanhTienTT.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Top | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.colTongThanhTienTT.Font = new System.Drawing.Font("Tahoma", 7.5F, System.Drawing.FontStyle.Bold);
+            this.colTongThanhTienTT.Font = new DevExpress.Drawing.DXFont("Tahoma", 7.5F, DevExpress.Drawing.DXFontStyle.Bold);
             this.colTongThanhTienTT.Multiline = true;
             this.colTongThanhTienTT.Name = "colTongThanhTienTT";
-            this.colTongThanhTienTT.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.colTongThanhTienTT.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 5, 0, 0, 100F);
             this.colTongThanhTienTT.StylePriority.UseBorders = false;
             this.colTongThanhTienTT.StylePriority.UseFont = false;
             this.colTongThanhTienTT.StylePriority.UsePadding = false;
             this.colTongThanhTienTT.StylePriority.UseTextAlignment = false;
+            this.colTongThanhTienTT.Text = "2222";
             this.colTongThanhTienTT.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
             this.colTongThanhTienTT.Weight = 0.89267649893262035D;
+            // 
+            // colTongThanhTienST
+            // 
+            this.colTongThanhTienST.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Top | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.colTongThanhTienST.Font = new DevExpress.Drawing.DXFont("Tahoma", 7.5F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.colTongThanhTienST.Multiline = true;
+            this.colTongThanhTienST.Name = "colTongThanhTienST";
+            this.colTongThanhTienST.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.colTongThanhTienST.StylePriority.UseBorders = false;
+            this.colTongThanhTienST.StylePriority.UseFont = false;
+            this.colTongThanhTienST.StylePriority.UsePadding = false;
+            this.colTongThanhTienST.StylePriority.UseTextAlignment = false;
+            this.colTongThanhTienST.Text = "colTongThanhTienST";
+            this.colTongThanhTienST.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
+            this.colTongThanhTienST.Weight = 0.89267649893262035D;
             // 
             // colTongTienCK
             // 
             this.colTongTienCK.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Top | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.colTongTienCK.Font = new System.Drawing.Font("Tahoma", 7.5F, System.Drawing.FontStyle.Bold);
+            this.colTongTienCK.Font = new DevExpress.Drawing.DXFont("Tahoma", 7.5F, DevExpress.Drawing.DXFontStyle.Bold);
             this.colTongTienCK.Multiline = true;
             this.colTongTienCK.Name = "colTongTienCK";
             this.colTongTienCK.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
@@ -622,7 +653,7 @@
             // colTongThanhToan
             // 
             this.colTongThanhToan.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Top | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.colTongThanhToan.Font = new System.Drawing.Font("Tahoma", 7.5F, System.Drawing.FontStyle.Bold);
+            this.colTongThanhToan.Font = new DevExpress.Drawing.DXFont("Tahoma", 7.5F, DevExpress.Drawing.DXFontStyle.Bold);
             this.colTongThanhToan.Multiline = true;
             this.colTongThanhToan.Name = "colTongThanhToan";
             this.colTongThanhToan.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
@@ -643,7 +674,7 @@
             // XrTable2
             // 
             this.XrTable2.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Top | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.XrTable2.Font = new System.Drawing.Font("Tahoma", 7.5F, System.Drawing.FontStyle.Bold);
+            this.XrTable2.Font = new DevExpress.Drawing.DXFont("Tahoma", 7.5F, DevExpress.Drawing.DXFontStyle.Bold);
             this.XrTable2.LocationFloat = new DevExpress.Utils.PointFloat(1.536662F, 0F);
             this.XrTable2.Name = "XrTable2";
             this.XrTable2.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
@@ -749,13 +780,26 @@
             this.xrTableCell9.Borders = DevExpress.XtraPrinting.BorderSide.Top;
             this.xrTableCell9.Multiline = true;
             this.xrTableCell9.Name = "xrTableCell9";
-            this.xrTableCell9.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 5, 0, 0, 100F);
+            this.xrTableCell9.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
             this.xrTableCell9.StylePriority.UseBorders = false;
             this.xrTableCell9.StylePriority.UsePadding = false;
             this.xrTableCell9.StylePriority.UseTextAlignment = false;
-            this.xrTableCell9.Text = "CK (%)";
+            this.xrTableCell9.Text = "CK\r\n(%)";
             this.xrTableCell9.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.xrTableCell9.Weight = 0.37267637109143958D;
+            this.xrTableCell9.Weight = 0.43478910073537763D;
+            // 
+            // xrTableCell11
+            // 
+            this.xrTableCell11.Borders = DevExpress.XtraPrinting.BorderSide.Top;
+            this.xrTableCell11.Multiline = true;
+            this.xrTableCell11.Name = "xrTableCell11";
+            this.xrTableCell11.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 5, 0, 0, 100F);
+            this.xrTableCell11.StylePriority.UseBorders = false;
+            this.xrTableCell11.StylePriority.UsePadding = false;
+            this.xrTableCell11.StylePriority.UseTextAlignment = false;
+            this.xrTableCell11.Text = "Thành tiền (trước thuế)";
+            this.xrTableCell11.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
+            this.xrTableCell11.Weight = 0.86957820824294407D;
             // 
             // xrTableCell2
             // 
@@ -808,47 +852,6 @@
             // 
             this.xtraTabbedMdiManager2.MdiParent = null;
             // 
-            // xrTableCell11
-            // 
-            this.xrTableCell11.Borders = DevExpress.XtraPrinting.BorderSide.Top;
-            this.xrTableCell11.Multiline = true;
-            this.xrTableCell11.Name = "xrTableCell11";
-            this.xrTableCell11.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 5, 0, 0, 100F);
-            this.xrTableCell11.StylePriority.UseBorders = false;
-            this.xrTableCell11.StylePriority.UsePadding = false;
-            this.xrTableCell11.StylePriority.UseTextAlignment = false;
-            this.xrTableCell11.Text = "Thành tiền (trước thuế)";
-            this.xrTableCell11.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
-            this.xrTableCell11.Weight = 0.93169093788688218D;
-            // 
-            // colThanhTienTT
-            // 
-            this.colThanhTienTT.Borders = DevExpress.XtraPrinting.BorderSide.Top;
-            this.colThanhTienTT.Multiline = true;
-            this.colThanhTienTT.Name = "colThanhTienTT";
-            this.colThanhTienTT.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 5, 0, 0, 100F);
-            this.colThanhTienTT.StylePriority.UseBorders = false;
-            this.colThanhTienTT.StylePriority.UsePadding = false;
-            this.colThanhTienTT.StylePriority.UseTextAlignment = false;
-            this.colThanhTienTT.Text = "colThanhTienTT";
-            this.colThanhTienTT.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
-            this.colThanhTienTT.Weight = 1.6523125572208375D;
-            // 
-            // colTongThanhTienST
-            // 
-            this.colTongThanhTienST.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Top | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.colTongThanhTienST.Font = new System.Drawing.Font("Tahoma", 7.5F, System.Drawing.FontStyle.Bold);
-            this.colTongThanhTienST.Multiline = true;
-            this.colTongThanhTienST.Name = "colTongThanhTienST";
-            this.colTongThanhTienST.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
-            this.colTongThanhTienST.StylePriority.UseBorders = false;
-            this.colTongThanhTienST.StylePriority.UseFont = false;
-            this.colTongThanhTienST.StylePriority.UsePadding = false;
-            this.colTongThanhTienST.StylePriority.UseTextAlignment = false;
-            this.colTongThanhTienST.Text = "colTongThanhTienST";
-            this.colTongThanhTienST.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
-            this.colTongThanhTienST.Weight = 0.89267649893262035D;
-            // 
             // Rpt_BaoCaoTienChiecKhauA5
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -858,13 +861,13 @@
             this.ReportHeader,
             this.ReportFooter,
             this.PageHeader});
-            this.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F);
             this.Landscape = true;
-            this.Margins = new System.Drawing.Printing.Margins(21, 16, 22, 23);
+            this.Margins = new DevExpress.Drawing.DXMargins(21F, 16F, 22F, 23F);
             this.PageHeight = 583;
             this.PageWidth = 827;
-            this.PaperKind = System.Drawing.Printing.PaperKind.A5;
-            this.Version = "21.2";
+            this.PaperKind = DevExpress.Drawing.Printing.DXPaperKind.A5;
+            this.Version = "23.1";
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.XrTable2)).EndInit();
@@ -884,7 +887,6 @@
         private DevExpress.XtraReports.UI.ReportFooterBand ReportFooter;
         internal DevExpress.XtraReports.UI.XRLabel XrLabel3;
         private DevExpress.XtraReports.UI.XRLabel lblWebsite;
-        private DevExpress.XtraReports.UI.XRLabel lblEmail;
         private DevExpress.XtraReports.UI.XRLabel lblSoDT;
         private DevExpress.XtraReports.UI.XRLabel lblDiaChi;
         private DevExpress.XtraReports.UI.XRLabel lblTenDonVi;
@@ -939,5 +941,6 @@
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell11;
         private DevExpress.XtraReports.UI.XRTableCell colThanhTienTT;
         private DevExpress.XtraReports.UI.XRTableCell colTongThanhTienST;
+        private DevExpress.XtraReports.UI.XRLabel LblFromDateToDate;
     }
 }

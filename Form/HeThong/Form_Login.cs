@@ -113,11 +113,11 @@ namespace VisualStudio2019.Form
         {
             //Dọc cấu hình
             ReadConfig();
-            string imagePath = Application.StartupPath + @"\logo\background.png";
+            string imagePath = Application.StartupPath + @"\logo\background.jpg";
             if (File.Exists(imagePath))
             {
                 // Sử dụng PictureEdit để load ảnh
-                pictureEdit1.Image = Image.FromFile(imagePath);
+                picLogo.Image = Image.FromFile(imagePath);
             }
         }
 

@@ -150,15 +150,19 @@ namespace VisualStudio2019.Form
                     });
                     DataTable dataTable = result.Tables[0]; // Giả sử dữ liệu nằm ở sheet đầu tiên
 
+
                  
                     foreach (DataRow row in dataTable.Rows)
                     {
-                        string maSP = row["MaSP"].ToString();
+                        string maSP = ExecSQL.ExecProcedureSacalar("spGetAuToProductCode").ToString();
                         string tenSP = row["TenSanPham"].ToString();
                         string dvt = row["DonViTinh"].ToString();
                         string ghichu = row["GhiChu"].ToString();
                         string LoaiSanPham = row["TenLoai"].ToString();                      
                         string QuyCach = row["QuyCach"].ToString();
+                        int VAT = Convert.ToInt32(row["VAT"]);
+                        decimal GiaBan = Convert.ToDecimal(row["GiaBan"]);
+                        int IDLoaiHang = row["LoaiHang"].ToString()=="Sản xuất" ? 1 : 2;
                         var IDLoaiSP = ExecSQL.ExecProcedureSacalar("sp_LoaiSanPhamSelectByTenLoai", new
                         {
                             TenLoai = LoaiSanPham
@@ -168,7 +172,7 @@ namespace VisualStudio2019.Form
                             DonViTinh = dvt
                         });
                         //Cập nhật data
-                        var data = ExecSQL.ExecProcedureNonData("sp_SanPhamInsert", new
+                        var data = ExecSQL.ExecProcedureNonData("spImportSanPham", new
                         {
                             MaSP=maSP,
                             TenSanPham=tenSP,
@@ -176,7 +180,10 @@ namespace VisualStudio2019.Form
                             LoaiSanPham=Convert.ToInt32(IDLoaiSP.ToString()),
                             GhiChu=ghichu,
                             QuyCach,
-                            NguoiTao = Form_Template.TaiKhoanLogin.ToUpper()
+                            IDLoaiHang=IDLoaiHang,
+                            NguoiTao = Form_Template.TaiKhoanLogin.ToUpper(),
+                            VAT= VAT,
+                            GiaSauThue = GiaBan
                         });
                         dem += 1;
                     }
@@ -307,7 +314,7 @@ namespace VisualStudio2019.Form
            
         }
 
-        private void btnCapNhatGiaBan_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void BtnCapNhatGiaBan_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             if (gridView1.SelectedRowsCount == 0)
             {
@@ -334,13 +341,13 @@ namespace VisualStudio2019.Form
             }
         }
 
-        private void chkTatCa_CheckedChanged(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void ChkTatCa_CheckedChanged(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             option = chkTatCa.Checked ? 2 : 1;
             GetSanPham(option);
         }
 
-        private void btnXoaAnhSP_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void BtnXoaAnhSP_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             string sourceFilePath = Form_Template.strURLImage + @"\" + txtMaSP.Text + ".jpg";
             if (File.Exists(sourceFilePath))
@@ -368,7 +375,7 @@ namespace VisualStudio2019.Form
             }
         }
 
-        private void grcSanPham_DoubleClick(object sender, EventArgs e)
+        private void GrcSanPham_DoubleClick(object sender, EventArgs e)
         {
             if (BtnSua.Enabled == false) { return; }
             Form_Template.Edit = true;
@@ -377,7 +384,7 @@ namespace VisualStudio2019.Form
             frm.ShowDialog();
         }
 
-        private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
+        private void GridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
             var i = gridView1.FocusedRowHandle;
             if (i < 0) { return; }
@@ -385,6 +392,11 @@ namespace VisualStudio2019.Form
             txtQuyCach.EditValue = gridView1.GetRowCellValue(i, "QuyCach");
             txtLoaiSP.EditValue = gridView1.GetRowCellValue(i, "TenLoai");
             txtNhomSP.EditValue = gridView1.GetRowCellValue(i, "NhomSanPham");
+        }
+
+        private void BtnImportExcel2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
         }
     }
 }

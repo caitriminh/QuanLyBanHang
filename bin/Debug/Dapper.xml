@@ -290,6 +290,15 @@
             <param name="precision">The precision of the parameter.</param>
             <param name="scale">The scale of the parameter.</param>
         </member>
+        <member name="M:Dapper.DynamicParameters.AddParameters(System.Data.IDbCommand)">
+            <summary>
+            Add all the parameters needed to the command just before it executes, using the
+            command's own text and type for any query-specific handling (literal tokens, etc);
+            this allows external tooling (for example build-time code generators) to apply a
+            parameter bag without constructing an <see cref="T:Dapper.SqlMapper.Identity"/>
+            </summary>
+            <param name="command">The raw command prior to execution</param>
+        </member>
         <member name="P:Dapper.DynamicParameters.RemoveUnused">
             <summary>
             If true, the command-text is inspected and only values that are clearly used are included on the connection
@@ -2795,6 +2804,13 @@
             Indicates whether single-character parameter tokens (<c>?</c> etc) will be detected and used where possible;
             this feature is not recommended and will be disabled by default in future versions;
             where possible, prefer named parameters (<c>@yourParam</c> etc) or Dapper's "pseudo-positional" parameters (<c>?yourParam? etc</c>).
+            </summary>
+        </member>
+        <member name="P:Dapper.SqlMapper.Settings.PreferTypeHandlersForEnums">
+            <summary>
+            When true, Dapper checks for a registered TypeHandler for enum types before
+            falling back to the default behavior of sending enums as their underlying integer type.
+            This enables custom enum serialization (e.g. storing enums as strings), while preserving existing behavior.
             </summary>
         </member>
         <member name="T:Dapper.SqlMapper.TypeHandler`1">

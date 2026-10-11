@@ -25,11 +25,14 @@ namespace VisualStudio2019.Report
             lbl_MST.Text = "MST: " + dt.Rows[0]["MST"].ToString();
             lbl_nguoiDaiDien.Text = dt.Rows[0]["NguoiDaiDien"].ToString();
             /////////////////////////////////////////////////////////////////////
-            lblNgayIn.Text = DateTime.Now.ToString();
+            lblNgayIn.Text = "Ngày in: " + DateTime.Now.ToString();
             lblMaHD.Text = Form_Template.dtReport.Rows[0]["MaDonHang"].ToString();
-            lbl_NgayDatHang.Text = @": " + Convert.ToDateTime(Form_Template.dtReport.Rows[0]["NgayDatHang"]).ToString("dd/MM/yyyy");
+            lbl_NgayDatHang.Text =  Convert.ToDateTime(Form_Template.dtReport.Rows[0]["NgayDatHang"]).ToString("dd/MM/yyyy");
+            LblNgayGiaoHang.Text = Convert.ToDateTime(Form_Template.dtReport.Rows[0]["NgayGiaoHang"]).ToString("dd/MM/yyyy");
             lblKhachHang.Text = @": " + Form_Template.dtReport.Rows[0]["TenKhachHang"].ToString();
             lblDiaChiKH.Text = @": " + Form_Template.dtReport.Rows[0]["DiaChi"];
+            LblNguoiLienHe.Text = string.IsNullOrWhiteSpace(Form_Template.dtReport.Rows[0]["NguoiLienHe"].ToString())? ":" : ": " + 
+                Form_Template.dtReport.Rows[0]["NguoiLienHe"].ToString() + " - ĐT: " + Form_Template.dtReport.Rows[0]["SoDTNguoiLienHe"].ToString();
 
             colMaSP.DataBindings.Add("Text", DataSource, "Code");
             colTenSanPham.DataBindings.Add("Text", DataSource, "TenSanPham");
@@ -44,8 +47,7 @@ namespace VisualStudio2019.Report
 
             colTongSL.DataBindings.Add("Text", DataSource, "SoLuong");
             colTongSL.Summary = new XRSummary(SummaryRunning.Report, SummaryFunc.Sum, "{0:#,##0}");
-
-            lbl_NgayGiaoHang.Text = "- Ngày giao hàng: " + Convert.ToDateTime(Form_Template.dtReport.Rows[0]["NgayDatHang"]).ToString("dd/MM/yyyy");
+           
             lblDiaDiemGiaoHang.Text = "- Địa điểm giao hàng: " + Form_Template.dtReport.Rows[0]["TenKhachHang"].ToString();
             lblTenCty.Text = dt.Rows[0]["TenDonVi"].ToString();
             lbl_TenCtyMua.Text = Form_Template.dtReport.Rows[0]["TenKhachHang"].ToString().ToUpper();

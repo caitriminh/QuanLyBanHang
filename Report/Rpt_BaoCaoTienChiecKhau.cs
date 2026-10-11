@@ -1,5 +1,7 @@
 ﻿using DevExpress.XtraReports.UI;
 using System;
+using System.Data;
+using System.Linq;
 using VisualStudio2019.Class;
 
 namespace VisualStudio2019.Report
@@ -17,14 +19,18 @@ namespace VisualStudio2019.Report
             if (dt == null) { return; }
             lblTenDonVi.Text = dt.Rows[0]["TenDonVi"].ToString();
             lblDiaChi.Text = "Đ/c: " + dt.Rows[0]["DiaChi"].ToString();
-            lblSoDT.Text = "Số ĐT: " + dt.Rows[0]["SoDT"].ToString();
-            lblEmail.Text = "Email: " + dt.Rows[0]["Email"].ToString();
-            lblWebsite.Text = "Website: " + dt.Rows[0]["Website"].ToString();
+            lblSoDT.Text = "Số ĐT: " + dt.Rows[0]["SoDT"].ToString();           
+            lblWebsite.Text = "Website: " + dt.Rows[0]["Website"].ToString() + " - Email: " + dt.Rows[0]["Email"].ToString();
             lbl_MST.Text = "MST: " + dt.Rows[0]["MST"].ToString();
             lbl_NguoiDaiDien.Text = dt.Rows[0]["NguoiDaiDien"].ToString();
             /////////////////////////////////////////////////////////////////////
-            lblNgayIn.Text = DateTime.Now.ToString();
-            lblNgayThang.Text = "Ngày   " + DateTime.Now.Day.ToString() + "   tháng   " + DateTime.Now.Month.ToString() + "  năm  " + DateTime.Now.Year.ToString();
+            lblNgayIn.Text ="Ngày in: " + DateTime.Now.ToString();
+
+            DateTime ngayLonNhat = Form_Template.dtReport.AsEnumerable().Max(row => row.Field<DateTime>("NgayLap"));
+            DateTime ngayNhoNhat = Form_Template.dtReport.AsEnumerable().Min(row => row.Field<DateTime>("NgayLap"));
+
+            lblNgayThang.Text = "Ngày   " + ngayLonNhat.Day.ToString() + "   tháng   " + ngayLonNhat.Month.ToString() + "  năm  " + ngayLonNhat.Year.ToString();
+            xrLabel1.Text = "Từ ngày: " + ngayNhoNhat.ToString("dd/MM/yyyy") + " đến ngày: " + ngayLonNhat.ToString("dd/MM/yyyy");
             //GroupHeader1.GroupFields.Add(new GroupField("MaHoaDon", XRColumnSortOrder.Ascending));
             //colMaHD.DataBindings.Add("Text", null, "MaHoaDon", "Số HĐ: {0}");
             //colNgayLap.DataBindings.Add("Text", null, "NgayLap", "Ngày HĐ: {0: dd/MM/yyyy}");
@@ -63,6 +69,8 @@ namespace VisualStudio2019.Report
 
             try
             {
+               
+
                 object sumObject = Form_Template.dtReport.Compute("SUM(TienChiecKhau)", string.Empty);
                 decimal sum = Convert.ToDecimal(sumObject);
                 lblGhiChu.Text = "- Tiền chiếc khấu của quý khách là " + Form_Template.dtReport.Rows[0]["ChiecKhau"].ToString() + "%, Số tiển: " + sum.ToString("#,##0") + " VND";

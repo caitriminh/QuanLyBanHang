@@ -31,9 +31,18 @@ namespace VisualStudio2019.Form
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmThemGiaoViec));
             this.Layoutkhachhang = new DevExpress.XtraLayout.LayoutControl();
+            this.txtKetQua = new DevExpress.XtraEditors.TextEdit();
+            this.txtHuongXuLy = new DevExpress.XtraEditors.TextEdit();
+            this.txtKhoKhan = new DevExpress.XtraEditors.TextEdit();
+            this.txtNoiDungCongViec = new DevExpress.XtraEditors.TextEdit();
+            this.txtDienThoai = new DevExpress.XtraEditors.TextEdit();
+            this.txtHieuTruong = new DevExpress.XtraEditors.TextEdit();
+            this.txtSoLuongHS = new DevExpress.XtraEditors.SpinEdit();
+            this.dteNgayNhap = new DevExpress.XtraEditors.DateEdit();
             this.txtTenTruong = new DevExpress.XtraEditors.TextEdit();
             this.btnDong = new DevExpress.XtraEditors.SimpleButton();
             this.btnLuu = new DevExpress.XtraEditors.SimpleButton();
+            this.txtDiaChi = new DevExpress.XtraEditors.TextEdit();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -41,27 +50,28 @@ namespace VisualStudio2019.Form
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.dteNgayNhap = new DevExpress.XtraEditors.DateEdit();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.txtDiaChi = new DevExpress.XtraEditors.TextEdit();
-            this.txtSoLuongHS = new DevExpress.XtraEditors.SpinEdit();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.txtHieuTruong = new DevExpress.XtraEditors.TextEdit();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.txtDienThoai = new DevExpress.XtraEditors.TextEdit();
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.txtNoiDungCongViec = new DevExpress.XtraEditors.TextEdit();
             this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.txtKhoKhan = new DevExpress.XtraEditors.TextEdit();
             this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.txtHuongXuLy = new DevExpress.XtraEditors.TextEdit();
             this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.txtKetQua = new DevExpress.XtraEditors.TextEdit();
             this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             ((System.ComponentModel.ISupportInitialize)(this.Layoutkhachhang)).BeginInit();
             this.Layoutkhachhang.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtKetQua.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtHuongXuLy.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtKhoKhan.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNoiDungCongViec.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDienThoai.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtHieuTruong.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSoLuongHS.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dteNgayNhap.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dteNgayNhap.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTenTruong.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDiaChi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
@@ -69,25 +79,15 @@ namespace VisualStudio2019.Form
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dteNgayNhap.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dteNgayNhap.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDiaChi.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSoLuongHS.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtHieuTruong.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDienThoai.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNoiDungCongViec.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtKhoKhan.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtHuongXuLy.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtKetQua.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
             this.SuspendLayout();
             // 
             // Layoutkhachhang
@@ -109,8 +109,84 @@ namespace VisualStudio2019.Form
             this.Layoutkhachhang.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Layoutkhachhang.Name = "Layoutkhachhang";
             this.Layoutkhachhang.Root = this.Root;
-            this.Layoutkhachhang.Size = new System.Drawing.Size(714, 379);
+            this.Layoutkhachhang.Size = new System.Drawing.Size(714, 393);
             this.Layoutkhachhang.TabIndex = 4;
+            // 
+            // txtKetQua
+            // 
+            this.txtKetQua.Location = new System.Drawing.Point(125, 283);
+            this.txtKetQua.Name = "txtKetQua";
+            this.txtKetQua.Size = new System.Drawing.Size(575, 23);
+            this.txtKetQua.StyleController = this.Layoutkhachhang;
+            this.txtKetQua.TabIndex = 29;
+            // 
+            // txtHuongXuLy
+            // 
+            this.txtHuongXuLy.Location = new System.Drawing.Point(125, 256);
+            this.txtHuongXuLy.Name = "txtHuongXuLy";
+            this.txtHuongXuLy.Size = new System.Drawing.Size(575, 23);
+            this.txtHuongXuLy.StyleController = this.Layoutkhachhang;
+            this.txtHuongXuLy.TabIndex = 28;
+            // 
+            // txtKhoKhan
+            // 
+            this.txtKhoKhan.Location = new System.Drawing.Point(125, 229);
+            this.txtKhoKhan.Name = "txtKhoKhan";
+            this.txtKhoKhan.Size = new System.Drawing.Size(575, 23);
+            this.txtKhoKhan.StyleController = this.Layoutkhachhang;
+            this.txtKhoKhan.TabIndex = 27;
+            // 
+            // txtNoiDungCongViec
+            // 
+            this.txtNoiDungCongViec.Location = new System.Drawing.Point(125, 202);
+            this.txtNoiDungCongViec.Name = "txtNoiDungCongViec";
+            this.txtNoiDungCongViec.Size = new System.Drawing.Size(575, 23);
+            this.txtNoiDungCongViec.StyleController = this.Layoutkhachhang;
+            this.txtNoiDungCongViec.TabIndex = 26;
+            // 
+            // txtDienThoai
+            // 
+            this.txtDienThoai.Location = new System.Drawing.Point(125, 175);
+            this.txtDienThoai.Name = "txtDienThoai";
+            this.txtDienThoai.Size = new System.Drawing.Size(575, 23);
+            this.txtDienThoai.StyleController = this.Layoutkhachhang;
+            this.txtDienThoai.TabIndex = 25;
+            // 
+            // txtHieuTruong
+            // 
+            this.txtHieuTruong.Location = new System.Drawing.Point(125, 148);
+            this.txtHieuTruong.Name = "txtHieuTruong";
+            this.txtHieuTruong.Size = new System.Drawing.Size(575, 23);
+            this.txtHieuTruong.StyleController = this.Layoutkhachhang;
+            this.txtHieuTruong.TabIndex = 24;
+            // 
+            // txtSoLuongHS
+            // 
+            this.txtSoLuongHS.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.txtSoLuongHS.Location = new System.Drawing.Point(125, 120);
+            this.txtSoLuongHS.Name = "txtSoLuongHS";
+            this.txtSoLuongHS.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtSoLuongHS.Size = new System.Drawing.Size(575, 24);
+            this.txtSoLuongHS.StyleController = this.Layoutkhachhang;
+            this.txtSoLuongHS.TabIndex = 23;
+            // 
+            // dteNgayNhap
+            // 
+            this.dteNgayNhap.EditValue = null;
+            this.dteNgayNhap.Location = new System.Drawing.Point(125, 39);
+            this.dteNgayNhap.Name = "dteNgayNhap";
+            this.dteNgayNhap.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dteNgayNhap.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dteNgayNhap.Size = new System.Drawing.Size(575, 23);
+            this.dteNgayNhap.StyleController = this.Layoutkhachhang;
+            this.dteNgayNhap.TabIndex = 22;
             // 
             // txtTenTruong
             // 
@@ -144,6 +220,14 @@ namespace VisualStudio2019.Form
             this.btnLuu.Text = "Lưu";
             this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
+            // txtDiaChi
+            // 
+            this.txtDiaChi.Location = new System.Drawing.Point(125, 93);
+            this.txtDiaChi.Name = "txtDiaChi";
+            this.txtDiaChi.Size = new System.Drawing.Size(575, 23);
+            this.txtDiaChi.StyleController = this.Layoutkhachhang;
+            this.txtDiaChi.TabIndex = 21;
+            // 
             // Root
             // 
             this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
@@ -153,7 +237,7 @@ namespace VisualStudio2019.Form
             this.emptySpaceItem2});
             this.Root.Name = "Root";
             this.Root.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-            this.Root.Size = new System.Drawing.Size(714, 379);
+            this.Root.Size = new System.Drawing.Size(714, 393);
             this.Root.TextVisible = false;
             // 
             // layoutControlGroup1
@@ -221,27 +305,6 @@ namespace VisualStudio2019.Form
             this.layoutControlItem4.Text = "Địa chỉ";
             this.layoutControlItem4.TextSize = new System.Drawing.Size(107, 16);
             // 
-            // emptySpaceItem2
-            // 
-            this.emptySpaceItem2.AllowHotTrack = false;
-            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 351);
-            this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(714, 28);
-            this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
-            // 
-            // dteNgayNhap
-            // 
-            this.dteNgayNhap.EditValue = null;
-            this.dteNgayNhap.Location = new System.Drawing.Point(125, 39);
-            this.dteNgayNhap.Name = "dteNgayNhap";
-            this.dteNgayNhap.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dteNgayNhap.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dteNgayNhap.Size = new System.Drawing.Size(575, 23);
-            this.dteNgayNhap.StyleController = this.Layoutkhachhang;
-            this.dteNgayNhap.TabIndex = 22;
-            // 
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.dteNgayNhap;
@@ -250,29 +313,6 @@ namespace VisualStudio2019.Form
             this.layoutControlItem3.Size = new System.Drawing.Size(690, 27);
             this.layoutControlItem3.Text = "Ngày nhập";
             this.layoutControlItem3.TextSize = new System.Drawing.Size(107, 16);
-            // 
-            // txtDiaChi
-            // 
-            this.txtDiaChi.Location = new System.Drawing.Point(125, 93);
-            this.txtDiaChi.Name = "txtDiaChi";
-            this.txtDiaChi.Size = new System.Drawing.Size(575, 23);
-            this.txtDiaChi.StyleController = this.Layoutkhachhang;
-            this.txtDiaChi.TabIndex = 21;
-            // 
-            // txtSoLuongHS
-            // 
-            this.txtSoLuongHS.EditValue = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.txtSoLuongHS.Location = new System.Drawing.Point(125, 120);
-            this.txtSoLuongHS.Name = "txtSoLuongHS";
-            this.txtSoLuongHS.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.txtSoLuongHS.Size = new System.Drawing.Size(575, 24);
-            this.txtSoLuongHS.StyleController = this.Layoutkhachhang;
-            this.txtSoLuongHS.TabIndex = 23;
             // 
             // layoutControlItem5
             // 
@@ -283,14 +323,6 @@ namespace VisualStudio2019.Form
             this.layoutControlItem5.Text = "Số lượng học sinh";
             this.layoutControlItem5.TextSize = new System.Drawing.Size(107, 16);
             // 
-            // txtHieuTruong
-            // 
-            this.txtHieuTruong.Location = new System.Drawing.Point(125, 148);
-            this.txtHieuTruong.Name = "txtHieuTruong";
-            this.txtHieuTruong.Size = new System.Drawing.Size(575, 23);
-            this.txtHieuTruong.StyleController = this.Layoutkhachhang;
-            this.txtHieuTruong.TabIndex = 24;
-            // 
             // layoutControlItem7
             // 
             this.layoutControlItem7.Control = this.txtHieuTruong;
@@ -299,14 +331,6 @@ namespace VisualStudio2019.Form
             this.layoutControlItem7.Size = new System.Drawing.Size(690, 27);
             this.layoutControlItem7.Text = "Hiệu trưởng";
             this.layoutControlItem7.TextSize = new System.Drawing.Size(107, 16);
-            // 
-            // txtDienThoai
-            // 
-            this.txtDienThoai.Location = new System.Drawing.Point(125, 175);
-            this.txtDienThoai.Name = "txtDienThoai";
-            this.txtDienThoai.Size = new System.Drawing.Size(575, 23);
-            this.txtDienThoai.StyleController = this.Layoutkhachhang;
-            this.txtDienThoai.TabIndex = 25;
             // 
             // layoutControlItem8
             // 
@@ -317,14 +341,6 @@ namespace VisualStudio2019.Form
             this.layoutControlItem8.Text = "Điện thoại";
             this.layoutControlItem8.TextSize = new System.Drawing.Size(107, 16);
             // 
-            // txtNoiDungCongViec
-            // 
-            this.txtNoiDungCongViec.Location = new System.Drawing.Point(125, 202);
-            this.txtNoiDungCongViec.Name = "txtNoiDungCongViec";
-            this.txtNoiDungCongViec.Size = new System.Drawing.Size(575, 23);
-            this.txtNoiDungCongViec.StyleController = this.Layoutkhachhang;
-            this.txtNoiDungCongViec.TabIndex = 26;
-            // 
             // layoutControlItem9
             // 
             this.layoutControlItem9.Control = this.txtNoiDungCongViec;
@@ -333,14 +349,6 @@ namespace VisualStudio2019.Form
             this.layoutControlItem9.Size = new System.Drawing.Size(690, 27);
             this.layoutControlItem9.Text = "Nội dung công việc";
             this.layoutControlItem9.TextSize = new System.Drawing.Size(107, 16);
-            // 
-            // txtKhoKhan
-            // 
-            this.txtKhoKhan.Location = new System.Drawing.Point(125, 229);
-            this.txtKhoKhan.Name = "txtKhoKhan";
-            this.txtKhoKhan.Size = new System.Drawing.Size(575, 23);
-            this.txtKhoKhan.StyleController = this.Layoutkhachhang;
-            this.txtKhoKhan.TabIndex = 27;
             // 
             // layoutControlItem10
             // 
@@ -351,14 +359,6 @@ namespace VisualStudio2019.Form
             this.layoutControlItem10.Text = "Khó khăn";
             this.layoutControlItem10.TextSize = new System.Drawing.Size(107, 16);
             // 
-            // txtHuongXuLy
-            // 
-            this.txtHuongXuLy.Location = new System.Drawing.Point(125, 256);
-            this.txtHuongXuLy.Name = "txtHuongXuLy";
-            this.txtHuongXuLy.Size = new System.Drawing.Size(575, 23);
-            this.txtHuongXuLy.StyleController = this.Layoutkhachhang;
-            this.txtHuongXuLy.TabIndex = 28;
-            // 
             // layoutControlItem11
             // 
             this.layoutControlItem11.Control = this.txtHuongXuLy;
@@ -367,14 +367,6 @@ namespace VisualStudio2019.Form
             this.layoutControlItem11.Size = new System.Drawing.Size(690, 27);
             this.layoutControlItem11.Text = "Hướng xử lý";
             this.layoutControlItem11.TextSize = new System.Drawing.Size(107, 16);
-            // 
-            // txtKetQua
-            // 
-            this.txtKetQua.Location = new System.Drawing.Point(125, 283);
-            this.txtKetQua.Name = "txtKetQua";
-            this.txtKetQua.Size = new System.Drawing.Size(575, 23);
-            this.txtKetQua.StyleController = this.Layoutkhachhang;
-            this.txtKetQua.TabIndex = 29;
             // 
             // layoutControlItem12
             // 
@@ -385,11 +377,19 @@ namespace VisualStudio2019.Form
             this.layoutControlItem12.Text = "Kết quả";
             this.layoutControlItem12.TextSize = new System.Drawing.Size(107, 16);
             // 
+            // emptySpaceItem2
+            // 
+            this.emptySpaceItem2.AllowHotTrack = false;
+            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 351);
+            this.emptySpaceItem2.Name = "emptySpaceItem2";
+            this.emptySpaceItem2.Size = new System.Drawing.Size(714, 42);
+            this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
+            // 
             // FrmThemGiaoViec
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(714, 379);
+            this.ClientSize = new System.Drawing.Size(714, 393);
             this.Controls.Add(this.Layoutkhachhang);
             this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -402,7 +402,17 @@ namespace VisualStudio2019.Form
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmThemGiaoViec_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.Layoutkhachhang)).EndInit();
             this.Layoutkhachhang.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.txtKetQua.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtHuongXuLy.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtKhoKhan.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNoiDungCongViec.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDienThoai.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtHieuTruong.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSoLuongHS.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dteNgayNhap.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dteNgayNhap.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTenTruong.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDiaChi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
@@ -410,25 +420,15 @@ namespace VisualStudio2019.Form
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dteNgayNhap.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dteNgayNhap.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDiaChi.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSoLuongHS.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtHieuTruong.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDienThoai.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNoiDungCongViec.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtKhoKhan.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtHuongXuLy.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtKetQua.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
             this.ResumeLayout(false);
 
         }

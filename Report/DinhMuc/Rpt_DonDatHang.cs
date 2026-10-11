@@ -19,14 +19,18 @@ namespace VisualStudio2019.Report
             lblTenDonVi.Text = dt.Rows[0]["TenDonVi"].ToString();
             lblDiaChi.Text = "Đ/c: " + dt.Rows[0]["DiaChi"].ToString();
             lblSoDT.Text = "Số ĐT: " + dt.Rows[0]["SoDT"].ToString();
-            lblEmail.Text = "Email: " + dt.Rows[0]["Email"].ToString();
             lblWebsite.Text = "Website: " + dt.Rows[0]["Website"].ToString();
+            lblEmail.Text = "Email: " + dt.Rows[0]["Email"].ToString();
             lbl_MST.Text= "MST: " + dt.Rows[0]["MST"].ToString();
             lbl_nguoiDaiDien.Text = dt.Rows[0]["NguoiDaiDien"].ToString();
             /////////////////////////////////////////////////////////////////////
-            lblNgayIn.Text = DateTime.Now.ToString();          
+            lblNgayIn.Text = "Ngày in: " + DateTime.Now.ToString();          
             lblMaHD.Text = Form_Template.dtReport.Rows[0]["MaDonHang"].ToString();
-            lbl_NgayDatHang.Text = @": " + Convert.ToDateTime( Form_Template.dtReport.Rows[0]["NgayDatHang"]).ToString("dd/MM/yyyy");
+            lbl_NgayDatHang.Text = Convert.ToDateTime( Form_Template.dtReport.Rows[0]["NgayDatHang"]).ToString("dd/MM/yyyy");
+            LblNgayGiaoHang.Text = Convert.ToDateTime(Form_Template.dtReport.Rows[0]["NgayGiaoHang"]).ToString("dd/MM/yyyy");
+            LblNguoiLienHe.Text = string.IsNullOrWhiteSpace(Form_Template.dtReport.Rows[0]["NguoiLienHe"].ToString()) ? ":" : ": " +
+                Form_Template.dtReport.Rows[0]["NguoiLienHe"].ToString() + " - ĐT: " + Form_Template.dtReport.Rows[0]["SoDTNguoiLienHe"].ToString();
+
             lblKhachHang.Text = @": " + Form_Template.dtReport.Rows[0]["TenKhachHang"].ToString();         
             lblDiaChiKH.Text = @": " + Form_Template.dtReport.Rows[0]["DiaChi"];
 
@@ -43,8 +47,7 @@ namespace VisualStudio2019.Report
 
             colTongSL.DataBindings.Add("Text", DataSource, "SoLuong");
             colTongSL.Summary = new XRSummary(SummaryRunning.Report, SummaryFunc.Sum, "{0:#,##0}");
-
-            lbl_NgayGiaoHang.Text ="- Ngày giao hàng: " + Convert.ToDateTime(Form_Template.dtReport.Rows[0]["NgayDatHang"]).ToString("dd/MM/yyyy");
+           
             lblDiaDiemGiaoHang.Text = "- Địa điểm giao hàng: " + Form_Template.dtReport.Rows[0]["TenKhachHang"].ToString();
             lblTenCty.Text = dt.Rows[0]["TenDonVi"].ToString();
             lbl_TenCtyMua.Text = Form_Template.dtReport.Rows[0]["TenKhachHang"].ToString().ToUpper();           

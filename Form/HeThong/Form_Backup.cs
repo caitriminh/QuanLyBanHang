@@ -21,28 +21,39 @@ namespace VisualStudio2019.Form
         }
 
         public void BackupData(string filePath)
-        {  
-            // Câu lệnh SQL để backup database
-            string backupQuery = $@"
-            BACKUP DATABASE {ExecSQL.dataName}
-            TO DISK = '{filePath}'
+        {
+            string databaseName = ExecSQL.dataName.Replace("]", "]]");
+            string backupFile = filePath.Replace("'", "''");
+
+            string backupQuery = string.Format(@"
+            BACKUP DATABASE [{0}]
+            TO DISK = N'{1}'
             WITH FORMAT,
-            MEDIANAME = 'SQLServerBackups',
-            NAME = 'Full Backup of {ExecSQL.dataName}';";
+                 MEDIANAME = 'SQLServerBackups',
+                 NAME = N'Full Backup of {0}';",
+                databaseName,
+                backupFile);
 
             try
             {
-                using (SqlConnection connection = new SqlConnection(ExecSQL.CONNECTION_STRINGS))
+                using (SqlConnection connection =
+                    new SqlConnection(ExecSQL.CONNECTION_STRINGS))
+                using (SqlCommand command = new SqlCommand(backupQuery, connection))
                 {
-                    SqlCommand command = new SqlCommand(backupQuery, connection);
+                    command.CommandTimeout = 0;
                     connection.Open();
-                    command.ExecuteNonQuery();                   
-                    XtraMessageBox.Show("Database backup completed successfully.", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    command.ExecuteNonQuery();
                 }
+
+                XtraMessageBox.Show("Sao lưu cơ sở dữ liệu thành công.","Thông Báo",MessageBoxButtons.OK,MessageBoxIcon.Information);
             }
             catch (Exception ex)
-            {               
-                XtraMessageBox.Show("Error during backup: " + ex.Message, "Cảnh Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            {
+                XtraMessageBox.Show(
+                    "Sao lưu cơ sở dữ liệu không thành công:\n\n" + ex.Message,
+                    "Cảnh Báo",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
             }
         }
 

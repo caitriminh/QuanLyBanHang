@@ -39,6 +39,11 @@ namespace VisualStudio2019.Form
                     txtGhiChu.EditValue = dt.Rows[0]["Ghichu"];
                     txtMST.EditValue = dt.Rows[0]["MaSoThue"];
                     cboNhomDoiTac.EditValue = dt.Rows[0]["Nhomkhachhang"];
+                    TxtNguoiDaiDien.EditValue = dt.Rows[0]["NguoiDaiDien"];
+                    TxtSoDTNuoiDaiDien.EditValue = dt.Rows[0]["SoDTNguoiDaiDien"];
+                    TxtChucVu.EditValue = dt.Rows[0]["ChucVu"];
+                    TxtNguoiLienHe.EditValue = dt.Rows[0]["NguoiLienHe"];
+                    TxtSoDTNguoiLienHe.EditValue = dt.Rows[0]["SoDTNguoiLienHe"];
                 }
             }
             else
@@ -103,7 +108,12 @@ namespace VisualStudio2019.Form
                     Ghichu = txtGhiChu.Text,
                     Nhomkhachhang = Convert.ToInt16(cboNhomDoiTac.EditValue),
                     NguoiSua = Form_Template.TaiKhoanLogin.ToUpper(),
-                    MaNVSale = Convert.ToInt32(cboNhanVien.EditValue)
+                    MaNVSale = Convert.ToInt32(cboNhanVien.EditValue),
+                    NguoiDaiDien=TxtNguoiDaiDien.Text,
+                    SoDTNguoiDaiDien=TxtSoDTNuoiDaiDien.Text,
+                    ChucVu=TxtChucVu.Text,
+                    NguoiLienHe=TxtNguoiLienHe.Text,
+                    SoDTNguoiLienHe=TxtSoDTNguoiLienHe.Text
                 }); ;
                 if (data.errcode == 1)
                 {
@@ -136,7 +146,12 @@ namespace VisualStudio2019.Form
                     Ghichu = txtGhiChu.Text,
                     Nhomkhachhang = Convert.ToInt16(cboNhomDoiTac.EditValue),
                     NguoiTao = Form_Template.TaiKhoanLogin.ToUpper(),
-                    MaNVSale = Convert.ToInt32(cboNhanVien.EditValue)
+                    MaNVSale = Convert.ToInt32(cboNhanVien.EditValue),
+                    NguoiDaiDien = TxtNguoiDaiDien.Text,
+                    SoDTNguoiDaiDien = TxtSoDTNuoiDaiDien.Text,
+                    ChucVu = TxtChucVu.Text,
+                    NguoiLienHe = TxtNguoiLienHe.Text,
+                    SoDTNguoiLienHe = TxtSoDTNguoiLienHe.Text
                 });
                 if (data.errcode == 1)
                 {

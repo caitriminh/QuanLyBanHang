@@ -33,47 +33,56 @@ namespace QuanLyBanHang.Report.BanLamViec
 
         public async void GetChart()
         {
-            chartControl1.Series.Clear();
-            var dataTable = ExecSQL.ExecProcedureDataAsDataTable("spTopSanPhamBanChayv2", new
+            try
             {
-                TuNgay = Convert.ToDateTime(dteFromDate.EditValue),
-                DenNgay = Convert.ToDateTime(dteToDate.EditValue)
-            });
-
-            await Task.Factory.StartNew(new Action(() =>
-            {
-                chartControl1.DataSource = dataTable;
-
-                chartControl1.BeginInvoke(new Action(() =>
+                chartControl1.Series.Clear();
+                var dataTable = ExecSQL.ExecProcedureDataAsDataTable("spTopSanPhamBanChayv2", new
                 {
-                    Series seriesTopSPBanChay = new Series("Sản phẩm bán chạy", ViewType.Pie);
-                    seriesTopSPBanChay.LabelsVisibility = DefaultBoolean.True;
+                    TuNgay = Convert.ToDateTime(dteFromDate.EditValue),
+                    DenNgay = Convert.ToDateTime(dteToDate.EditValue)
+                });
 
-                    foreach (DataRow dr in dataTable.Rows)
+                await Task.Factory.StartNew(new Action(() =>
+                {
+                    chartControl1.DataSource = dataTable;
+
+                    chartControl1.BeginInvoke(new Action(() =>
                     {
-                        seriesTopSPBanChay.Points.Add(new SeriesPoint(dr["TenSanPham"], dr["SoLuong"]));
-                    }
+                        Series seriesTopSPBanChay = new Series("Sản phẩm bán chạy", ViewType.Pie);
+                        seriesTopSPBanChay.LabelsVisibility = DefaultBoolean.True;
 
-                    // Gán series vào biểu đồ
-                    chartControl1.Series.Add(seriesTopSPBanChay);
+                        foreach (DataRow dr in dataTable.Rows)
+                        {
+                            seriesTopSPBanChay.Points.Add(new SeriesPoint(dr["TenSanPham"], dr["SoLuong"]));
+                        }
 
-                    // Cài đặt hiển thị label dạng phần trăm
-                    seriesTopSPBanChay.Label.TextPattern = "{A}: {VP:p1}";
+                        // Gán series vào biểu đồ
+                        chartControl1.Series.Add(seriesTopSPBanChay);
 
-                    // Tuỳ chỉnh giao diện pie view nếu cần
-                    PieSeriesView pieView = (PieSeriesView)seriesTopSPBanChay.View;
-                    pieView.RuntimeExploding = true; // click vào slice để bung ra
-                    pieView.ExplodedDistancePercentage = 5;
+                        // Cài đặt hiển thị label dạng phần trăm
+                        seriesTopSPBanChay.Label.TextPattern = "{A}: {VP:p1}";
 
-                    // Hiển thị chú thích
-                    //chartControl1.Legend.Visibility = DefaultBoolean.True;
-                    //chartControl1.Legend.AlignmentHorizontal = LegendAlignmentHorizontal.Right;
-                    //chartControl1.Legend.AlignmentVertical = LegendAlignmentVertical.Center;
-                    //chartControl1.Legend.Direction = LegendDirection.TopToBottom;
-                    //chartControl1.Legend.Margins.All = 10;
+                        // Tuỳ chỉnh giao diện pie view nếu cần
+                        PieSeriesView pieView = (PieSeriesView)seriesTopSPBanChay.View;
+                        pieView.RuntimeExploding = true; // click vào slice để bung ra
+                        pieView.ExplodedDistancePercentage = 5;
 
+                        // Hiển thị chú thích
+                        //chartControl1.Legend.Visibility = DefaultBoolean.True;
+                        //chartControl1.Legend.AlignmentHorizontal = LegendAlignmentHorizontal.Right;
+                        //chartControl1.Legend.AlignmentVertical = LegendAlignmentVertical.Center;
+                        //chartControl1.Legend.Direction = LegendDirection.TopToBottom;
+                        //chartControl1.Legend.Margins.All = 10;
+
+                    }));
                 }));
-            }));
+            }
+            catch (Exception)
+            {
+
+                
+            }
+           
         }
 
 

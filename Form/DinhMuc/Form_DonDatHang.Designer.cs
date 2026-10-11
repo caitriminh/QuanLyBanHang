@@ -31,22 +31,22 @@ namespace VisualStudio2019.Form
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_DonDatHang));
-            DevExpress.XtraGrid.GridFormatRule gridFormatRule1 = new DevExpress.XtraGrid.GridFormatRule();
-            DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue1 = new DevExpress.XtraEditors.FormatConditionRuleValue();
-            DevExpress.XtraGrid.GridFormatRule gridFormatRule2 = new DevExpress.XtraGrid.GridFormatRule();
-            DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue2 = new DevExpress.XtraEditors.FormatConditionRuleValue();
-            DevExpress.XtraGrid.GridFormatRule gridFormatRule3 = new DevExpress.XtraGrid.GridFormatRule();
-            DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue3 = new DevExpress.XtraEditors.FormatConditionRuleValue();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraGrid.GridFormatRule gridFormatRule4 = new DevExpress.XtraGrid.GridFormatRule();
+            DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue4 = new DevExpress.XtraEditors.FormatConditionRuleValue();
+            DevExpress.XtraGrid.GridFormatRule gridFormatRule5 = new DevExpress.XtraGrid.GridFormatRule();
+            DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue5 = new DevExpress.XtraEditors.FormatConditionRuleValue();
+            DevExpress.XtraGrid.GridFormatRule gridFormatRule6 = new DevExpress.XtraGrid.GridFormatRule();
+            DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue6 = new DevExpress.XtraEditors.FormatConditionRuleValue();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions3 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject9 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject10 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject11 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject12 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions4 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject13 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject14 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject15 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject16 = new DevExpress.Utils.SerializableAppearanceObject();
             this.colTinhTrang = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colLoaiDonHang = new DevExpress.XtraGrid.Columns.GridColumn();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
@@ -139,6 +139,10 @@ namespace VisualStudio2019.Form
             this.gridColumn42 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn43 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn45 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn44 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn46 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn47 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn48 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cboKy2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEdit1View)).BeginInit();
@@ -273,7 +277,7 @@ namespace VisualStudio2019.Form
             this.btnThemDHTaiTro.Caption = "Thêm đơn hàng tài trợ";
             this.btnThemDHTaiTro.Id = 18;
             this.btnThemDHTaiTro.Name = "btnThemDHTaiTro";
-            this.btnThemDHTaiTro.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnThemDHTaiTro_ItemClick);
+            this.btnThemDHTaiTro.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnThemDHTaiTro_ItemClick);
             // 
             // btnThemDonHangTang
             // 
@@ -326,39 +330,39 @@ namespace VisualStudio2019.Form
             this.btnInDonHangA5.Caption = "Đơn đặt hàng (A5)";
             this.btnInDonHangA5.Id = 13;
             this.btnInDonHangA5.Name = "btnInDonHangA5";
-            this.btnInDonHangA5.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnInDonHangA5_ItemClick);
+            this.btnInDonHangA5.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnInDonHangA5_ItemClick);
             // 
             // btnInDonHangTaiTro
             // 
             this.btnInDonHangTaiTro.Caption = "Đơn hàng tài trợ (A5)";
             this.btnInDonHangTaiTro.Id = 16;
             this.btnInDonHangTaiTro.Name = "btnInDonHangTaiTro";
-            this.btnInDonHangTaiTro.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnInDonHangTaiTro_ItemClick);
+            this.btnInDonHangTaiTro.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnInDonHangTaiTro_ItemClick);
             // 
             // btnReportDonHangQuatang
             // 
             this.btnReportDonHangQuatang.Caption = "Đơn hàng quà tặng (A5)";
             this.btnReportDonHangQuatang.Id = 20;
             this.btnReportDonHangQuatang.Name = "btnReportDonHangQuatang";
-            this.btnReportDonHangQuatang.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnReportDonHangQuatang_ItemClick);
+            this.btnReportDonHangQuatang.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnReportDonHangQuatang_ItemClick);
             // 
             // btninlenhsanxuat
             // 
             this.btninlenhsanxuat.Caption = "Lệnh sản xuất";
             this.btninlenhsanxuat.Id = 14;
             this.btninlenhsanxuat.Name = "btninlenhsanxuat";
-            this.btninlenhsanxuat.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btninlenhsanxuat_ItemClick);
+            this.btninlenhsanxuat.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btninlenhsanxuat_ItemClick);
             // 
             // btnInGiaoNhan
             // 
             this.btnInGiaoNhan.Caption = "Phiếu giao nhận";
             this.btnInGiaoNhan.Id = 15;
             this.btnInGiaoNhan.Name = "btnInGiaoNhan";
-            this.btnInGiaoNhan.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnInGiaoNhan_ItemClick);
+            this.btnInGiaoNhan.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnInGiaoNhan_ItemClick);
             // 
             // BtnExcel
             // 
-            this.BtnExcel.Caption = "Excel";
+            this.BtnExcel.Caption = "Xuất Excel";
             this.BtnExcel.Enabled = false;
             this.BtnExcel.Id = 5;
             this.BtnExcel.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("BtnExcel.ImageOptions.SvgImage")));
@@ -367,7 +371,7 @@ namespace VisualStudio2019.Form
             // 
             // BtnNap
             // 
-            this.BtnNap.Caption = "Nạp";
+            this.BtnNap.Caption = "Nạp Lại";
             this.BtnNap.Id = 6;
             this.BtnNap.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("BtnNap.ImageOptions.SvgImage")));
             this.BtnNap.Name = "BtnNap";
@@ -544,7 +548,7 @@ namespace VisualStudio2019.Form
             this.grcDonDatHang.UseEmbeddedNavigator = true;
             this.grcDonDatHang.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
-            this.grcDonDatHang.DoubleClick += new System.EventHandler(this.grcDonDatHang_DoubleClick);
+            this.grcDonDatHang.DoubleClick += new System.EventHandler(this.GrcDonDatHang_DoubleClick);
             // 
             // gridView1
             // 
@@ -566,34 +570,36 @@ namespace VisualStudio2019.Form
             this.gridColumn14,
             this.gridColumn15,
             this.gridColumn16,
-            this.colLoaiDonHang});
-            gridFormatRule1.ApplyToRow = true;
-            gridFormatRule1.Column = this.colTinhTrang;
-            gridFormatRule1.Name = "Format0";
-            formatConditionRuleValue1.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            formatConditionRuleValue1.Appearance.Options.UseBackColor = true;
-            formatConditionRuleValue1.Condition = DevExpress.XtraEditors.FormatCondition.Expression;
-            formatConditionRuleValue1.Expression = "[TinhTrang] = \'Đang thực hiện\'";
-            gridFormatRule1.Rule = formatConditionRuleValue1;
-            gridFormatRule2.ApplyToRow = true;
-            gridFormatRule2.Column = this.colLoaiDonHang;
-            gridFormatRule2.Name = "Format1";
-            formatConditionRuleValue2.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            formatConditionRuleValue2.Appearance.Options.UseBackColor = true;
-            formatConditionRuleValue2.Condition = DevExpress.XtraEditors.FormatCondition.Expression;
-            formatConditionRuleValue2.Expression = "[LoaiDonHangText] = \'Quà tặng\'";
-            gridFormatRule2.Rule = formatConditionRuleValue2;
-            gridFormatRule3.ApplyToRow = true;
-            gridFormatRule3.Column = this.colLoaiDonHang;
-            gridFormatRule3.Name = "Format2";
-            formatConditionRuleValue3.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            formatConditionRuleValue3.Appearance.Options.UseBackColor = true;
-            formatConditionRuleValue3.Condition = DevExpress.XtraEditors.FormatCondition.Expression;
-            formatConditionRuleValue3.Expression = "[LoaiDonHangText] = \'Tài trợ\'";
-            gridFormatRule3.Rule = formatConditionRuleValue3;
-            this.gridView1.FormatRules.Add(gridFormatRule1);
-            this.gridView1.FormatRules.Add(gridFormatRule2);
-            this.gridView1.FormatRules.Add(gridFormatRule3);
+            this.colLoaiDonHang,
+            this.gridColumn44,
+            this.gridColumn46});
+            gridFormatRule4.ApplyToRow = true;
+            gridFormatRule4.Column = this.colTinhTrang;
+            gridFormatRule4.Name = "Format0";
+            formatConditionRuleValue4.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            formatConditionRuleValue4.Appearance.Options.UseBackColor = true;
+            formatConditionRuleValue4.Condition = DevExpress.XtraEditors.FormatCondition.Expression;
+            formatConditionRuleValue4.Expression = "[TinhTrang] = \'Đang thực hiện\'";
+            gridFormatRule4.Rule = formatConditionRuleValue4;
+            gridFormatRule5.ApplyToRow = true;
+            gridFormatRule5.Column = this.colLoaiDonHang;
+            gridFormatRule5.Name = "Format1";
+            formatConditionRuleValue5.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            formatConditionRuleValue5.Appearance.Options.UseBackColor = true;
+            formatConditionRuleValue5.Condition = DevExpress.XtraEditors.FormatCondition.Expression;
+            formatConditionRuleValue5.Expression = "[LoaiDonHangText] = \'Quà tặng\'";
+            gridFormatRule5.Rule = formatConditionRuleValue5;
+            gridFormatRule6.ApplyToRow = true;
+            gridFormatRule6.Column = this.colLoaiDonHang;
+            gridFormatRule6.Name = "Format2";
+            formatConditionRuleValue6.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            formatConditionRuleValue6.Appearance.Options.UseBackColor = true;
+            formatConditionRuleValue6.Condition = DevExpress.XtraEditors.FormatCondition.Expression;
+            formatConditionRuleValue6.Expression = "[LoaiDonHangText] = \'Tài trợ\'";
+            gridFormatRule6.Rule = formatConditionRuleValue6;
+            this.gridView1.FormatRules.Add(gridFormatRule4);
+            this.gridView1.FormatRules.Add(gridFormatRule5);
+            this.gridView1.FormatRules.Add(gridFormatRule6);
             this.gridView1.GridControl = this.grcDonDatHang;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsSelection.CheckBoxSelectorColumnWidth = 50;
@@ -605,7 +611,7 @@ namespace VisualStudio2019.Form
             this.gridView1.OptionsView.ShowGroupPanel = false;
             this.gridView1.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
             new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.gridColumn1, DevExpress.Data.ColumnSortOrder.Descending)});
-            this.gridView1.RowCellClick += new DevExpress.XtraGrid.Views.Grid.RowCellClickEventHandler(this.gridView1_RowCellClick);
+            this.gridView1.RowCellClick += new DevExpress.XtraGrid.Views.Grid.RowCellClickEventHandler(this.GridView1_RowCellClick);
             this.gridView1.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridView1_FocusedRowChanged);
             // 
             // gridColumn1
@@ -705,7 +711,7 @@ namespace VisualStudio2019.Form
             this.gridColumn5.MinWidth = 25;
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.Visible = true;
-            this.gridColumn5.VisibleIndex = 14;
+            this.gridColumn5.VisibleIndex = 16;
             this.gridColumn5.Width = 250;
             // 
             // gridColumn23
@@ -719,7 +725,7 @@ namespace VisualStudio2019.Form
             this.gridColumn23.OptionsColumn.FixedWidth = true;
             this.gridColumn23.OptionsColumn.ReadOnly = true;
             this.gridColumn23.Visible = true;
-            this.gridColumn23.VisibleIndex = 15;
+            this.gridColumn23.VisibleIndex = 17;
             this.gridColumn23.Width = 160;
             // 
             // gridColumn24
@@ -731,7 +737,7 @@ namespace VisualStudio2019.Form
             this.gridColumn24.OptionsColumn.FixedWidth = true;
             this.gridColumn24.OptionsColumn.ReadOnly = true;
             this.gridColumn24.Visible = true;
-            this.gridColumn24.VisibleIndex = 16;
+            this.gridColumn24.VisibleIndex = 18;
             this.gridColumn24.Width = 130;
             // 
             // gridColumn25
@@ -745,7 +751,7 @@ namespace VisualStudio2019.Form
             this.gridColumn25.OptionsColumn.FixedWidth = true;
             this.gridColumn25.OptionsColumn.ReadOnly = true;
             this.gridColumn25.Visible = true;
-            this.gridColumn25.VisibleIndex = 17;
+            this.gridColumn25.VisibleIndex = 19;
             this.gridColumn25.Width = 160;
             // 
             // gridColumn26
@@ -757,7 +763,7 @@ namespace VisualStudio2019.Form
             this.gridColumn26.OptionsColumn.FixedWidth = true;
             this.gridColumn26.OptionsColumn.ReadOnly = true;
             this.gridColumn26.Visible = true;
-            this.gridColumn26.VisibleIndex = 18;
+            this.gridColumn26.VisibleIndex = 20;
             this.gridColumn26.Width = 130;
             // 
             // colXacNhan
@@ -778,10 +784,10 @@ namespace VisualStudio2019.Form
             // repositoryItemButtonEdit2
             // 
             this.repositoryItemButtonEdit2.AutoHeight = false;
-            editorButtonImageOptions1.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("editorButtonImageOptions1.SvgImage")));
-            editorButtonImageOptions1.SvgImageSize = new System.Drawing.Size(16, 16);
+            editorButtonImageOptions3.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("editorButtonImageOptions3.SvgImage")));
+            editorButtonImageOptions3.SvgImageSize = new System.Drawing.Size(16, 16);
             this.repositoryItemButtonEdit2.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions3, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject9, serializableAppearanceObject10, serializableAppearanceObject11, serializableAppearanceObject12, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.repositoryItemButtonEdit2.Name = "repositoryItemButtonEdit2";
             this.repositoryItemButtonEdit2.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
@@ -836,10 +842,10 @@ namespace VisualStudio2019.Form
             // repositoryItemButtonEdit1
             // 
             this.repositoryItemButtonEdit1.AutoHeight = false;
-            editorButtonImageOptions2.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("editorButtonImageOptions2.SvgImage")));
-            editorButtonImageOptions2.SvgImageSize = new System.Drawing.Size(16, 16);
+            editorButtonImageOptions4.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("editorButtonImageOptions4.SvgImage")));
+            editorButtonImageOptions4.SvgImageSize = new System.Drawing.Size(16, 16);
             this.repositoryItemButtonEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions4, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject13, serializableAppearanceObject14, serializableAppearanceObject15, serializableAppearanceObject16, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.repositoryItemButtonEdit1.Name = "repositoryItemButtonEdit1";
             this.repositoryItemButtonEdit1.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
@@ -1049,7 +1055,7 @@ namespace VisualStudio2019.Form
             this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage1,
             this.xtraTabPage2});
-            this.xtraTabControl1.SelectedPageChanged += new DevExpress.XtraTab.TabPageChangedEventHandler(this.xtraTabControl1_SelectedPageChanged);
+            this.xtraTabControl1.SelectedPageChanged += new DevExpress.XtraTab.TabPageChangedEventHandler(this.XtraTabControl1_SelectedPageChanged);
             // 
             // xtraTabPage1
             // 
@@ -1097,7 +1103,9 @@ namespace VisualStudio2019.Form
             this.gridColumn41,
             this.gridColumn42,
             this.gridColumn43,
-            this.gridColumn45});
+            this.gridColumn45,
+            this.gridColumn47,
+            this.gridColumn48});
             this.gvCTDonHang.GridControl = this.gcCTDonDatHang;
             this.gvCTDonHang.Name = "gvCTDonHang";
             this.gvCTDonHang.OptionsSelection.CheckBoxSelectorColumnWidth = 45;
@@ -1177,7 +1185,7 @@ namespace VisualStudio2019.Form
             this.gridColumn32.OptionsColumn.FixedWidth = true;
             this.gridColumn32.OptionsColumn.ReadOnly = true;
             this.gridColumn32.Visible = true;
-            this.gridColumn32.VisibleIndex = 13;
+            this.gridColumn32.VisibleIndex = 15;
             this.gridColumn32.Width = 251;
             // 
             // gridColumn33
@@ -1191,7 +1199,7 @@ namespace VisualStudio2019.Form
             this.gridColumn33.OptionsColumn.FixedWidth = true;
             this.gridColumn33.OptionsColumn.ReadOnly = true;
             this.gridColumn33.Visible = true;
-            this.gridColumn33.VisibleIndex = 14;
+            this.gridColumn33.VisibleIndex = 16;
             this.gridColumn33.Width = 160;
             // 
             // gridColumn34
@@ -1203,7 +1211,7 @@ namespace VisualStudio2019.Form
             this.gridColumn34.OptionsColumn.FixedWidth = true;
             this.gridColumn34.OptionsColumn.ReadOnly = true;
             this.gridColumn34.Visible = true;
-            this.gridColumn34.VisibleIndex = 15;
+            this.gridColumn34.VisibleIndex = 17;
             this.gridColumn34.Width = 130;
             // 
             // gridColumn35
@@ -1217,7 +1225,7 @@ namespace VisualStudio2019.Form
             this.gridColumn35.OptionsColumn.FixedWidth = true;
             this.gridColumn35.OptionsColumn.ReadOnly = true;
             this.gridColumn35.Visible = true;
-            this.gridColumn35.VisibleIndex = 16;
+            this.gridColumn35.VisibleIndex = 18;
             this.gridColumn35.Width = 160;
             // 
             // gridColumn36
@@ -1229,7 +1237,7 @@ namespace VisualStudio2019.Form
             this.gridColumn36.OptionsColumn.FixedWidth = true;
             this.gridColumn36.OptionsColumn.ReadOnly = true;
             this.gridColumn36.Visible = true;
-            this.gridColumn36.VisibleIndex = 17;
+            this.gridColumn36.VisibleIndex = 19;
             this.gridColumn36.Width = 130;
             // 
             // gridColumn37
@@ -1341,6 +1349,54 @@ namespace VisualStudio2019.Form
             this.gridColumn45.Visible = true;
             this.gridColumn45.VisibleIndex = 1;
             this.gridColumn45.Width = 112;
+            // 
+            // gridColumn44
+            // 
+            this.gridColumn44.Caption = "Người liên hệ";
+            this.gridColumn44.FieldName = "NguoiLienHe";
+            this.gridColumn44.MinWidth = 25;
+            this.gridColumn44.Name = "gridColumn44";
+            this.gridColumn44.OptionsColumn.FixedWidth = true;
+            this.gridColumn44.OptionsColumn.ReadOnly = true;
+            this.gridColumn44.Visible = true;
+            this.gridColumn44.VisibleIndex = 14;
+            this.gridColumn44.Width = 213;
+            // 
+            // gridColumn46
+            // 
+            this.gridColumn46.Caption = "Số ĐT";
+            this.gridColumn46.FieldName = "SoDTNguoiLienHe";
+            this.gridColumn46.MinWidth = 25;
+            this.gridColumn46.Name = "gridColumn46";
+            this.gridColumn46.OptionsColumn.FixedWidth = true;
+            this.gridColumn46.OptionsColumn.ReadOnly = true;
+            this.gridColumn46.Visible = true;
+            this.gridColumn46.VisibleIndex = 15;
+            this.gridColumn46.Width = 144;
+            // 
+            // gridColumn47
+            // 
+            this.gridColumn47.Caption = "Người liên hệ";
+            this.gridColumn47.FieldName = "NguoiLienHe";
+            this.gridColumn47.MinWidth = 25;
+            this.gridColumn47.Name = "gridColumn47";
+            this.gridColumn47.OptionsColumn.FixedWidth = true;
+            this.gridColumn47.OptionsColumn.ReadOnly = true;
+            this.gridColumn47.Visible = true;
+            this.gridColumn47.VisibleIndex = 13;
+            this.gridColumn47.Width = 170;
+            // 
+            // gridColumn48
+            // 
+            this.gridColumn48.Caption = "Số ĐT";
+            this.gridColumn48.FieldName = "SoDTNguoiLienHe";
+            this.gridColumn48.MinWidth = 25;
+            this.gridColumn48.Name = "gridColumn48";
+            this.gridColumn48.OptionsColumn.FixedWidth = true;
+            this.gridColumn48.OptionsColumn.ReadOnly = true;
+            this.gridColumn48.Visible = true;
+            this.gridColumn48.VisibleIndex = 14;
+            this.gridColumn48.Width = 137;
             // 
             // Form_DonDatHang
             // 
@@ -1479,5 +1535,9 @@ namespace VisualStudio2019.Form
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn45;
         private DevExpress.XtraBars.BarButtonItem btnThemDonHangTang;
         private DevExpress.XtraBars.BarButtonItem btnReportDonHangQuatang;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn44;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn46;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn47;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn48;
     }
 }

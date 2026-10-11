@@ -197,10 +197,20 @@ namespace VisualStudio2019.Form
 
         private void BtnIn_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            if (gridView1.SelectedRowsCount <= 0)
+            {
+                XtraMessageBox.Show("Không có dữ liệu để in.", "Cảnh Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            string _joinId = string.Join(", ", gridView1.GetSelectedRows()
+              .Select(r => (gridView1.GetRow(r) as DataRowView)?["Id"])
+              .Where(v => v != null && v != DBNull.Value)
+              .Select(v => int.TryParse(v.ToString(), out int n) ? n.ToString() : v.ToString().Trim()));
+
             Form_Template.dtReport = ExecSQL.ExecProcedureDataAsDataTable("sp_TienChiecKhau", new
             {
                 MaKH = lbl_MaKH.Text,
-                IdCK = lbl_ID.Text,
+                IdCK = _joinId,
                 tungay = Convert.ToDateTime(dteTuNgay.EditValue),
                 denngay = Convert.ToDateTime(dteDenNgay.EditValue)
             });
@@ -216,10 +226,19 @@ namespace VisualStudio2019.Form
 
         private void btnPrintA5_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            if (gridView1.SelectedRowsCount <= 0)
+            {
+                XtraMessageBox.Show("Không có dữ liệu để in.", "Cảnh Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            string _joinId = string.Join(", ", gridView1.GetSelectedRows()
+              .Select(r => (gridView1.GetRow(r) as DataRowView)?["Id"])
+              .Where(v => v != null && v != DBNull.Value)
+              .Select(v => int.TryParse(v.ToString(), out int n) ? n.ToString() : v.ToString().Trim()));
             Form_Template.dtReport = ExecSQL.ExecProcedureDataAsDataTable("sp_TienChiecKhau", new
             {
                 MaKH = lbl_MaKH.Text,
-                IdCK = lbl_ID.Text,
+                IdCK = _joinId,
                 tungay = Convert.ToDateTime(dteTuNgay.EditValue),
                 denngay = Convert.ToDateTime(dteDenNgay.EditValue)
             });

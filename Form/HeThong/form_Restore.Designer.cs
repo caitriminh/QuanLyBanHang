@@ -81,7 +81,7 @@ namespace VisualStudio2019.Form
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.Root;
-            this.layoutControl1.Size = new System.Drawing.Size(505, 141);
+            this.layoutControl1.Size = new System.Drawing.Size(505, 155);
             this.layoutControl1.TabIndex = 16;
             this.layoutControl1.Text = "layoutControl1";
             // 
@@ -130,7 +130,7 @@ namespace VisualStudio2019.Form
             this.emptySpaceItem2});
             this.Root.Name = "Root";
             this.Root.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-            this.Root.Size = new System.Drawing.Size(505, 141);
+            this.Root.Size = new System.Drawing.Size(505, 155);
             this.Root.TextVisible = false;
             // 
             // layoutControlGroup1
@@ -195,14 +195,14 @@ namespace VisualStudio2019.Form
             this.emptySpaceItem2.AllowHotTrack = false;
             this.emptySpaceItem2.Location = new System.Drawing.Point(0, 111);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(505, 30);
+            this.emptySpaceItem2.Size = new System.Drawing.Size(505, 44);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
             // form_Restore
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(505, 141);
+            this.ClientSize = new System.Drawing.Size(505, 155);
             this.Controls.Add(this.layoutControl1);
             this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.MaximizeBox = false;

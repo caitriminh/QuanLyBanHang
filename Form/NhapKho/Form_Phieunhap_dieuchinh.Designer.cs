@@ -36,7 +36,9 @@ namespace VisualStudio2019.Form
             this.BtnThem = new DevExpress.XtraBars.BarButtonItem();
             this.BtnSua = new DevExpress.XtraBars.BarButtonItem();
             this.BtnXoa = new DevExpress.XtraBars.BarButtonItem();
+            this.btnOptionIn = new DevExpress.XtraBars.BarSubItem();
             this.BtnIn = new DevExpress.XtraBars.BarButtonItem();
+            this.btnPrintA5 = new DevExpress.XtraBars.BarButtonItem();
             this.BtnExcel = new DevExpress.XtraBars.BarButtonItem();
             this.BtnNap = new DevExpress.XtraBars.BarButtonItem();
             this.BtnDong = new DevExpress.XtraBars.BarButtonItem();
@@ -87,8 +89,6 @@ namespace VisualStudio2019.Form
             this.gridColumn26 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn27 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.xtraSaveFileDialog1 = new DevExpress.XtraEditors.XtraSaveFileDialog(this.components);
-            this.btnOptionIn = new DevExpress.XtraBars.BarSubItem();
-            this.btnPrintA5 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cboKy2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEdit1View)).BeginInit();
@@ -188,6 +188,17 @@ namespace VisualStudio2019.Form
             this.BtnXoa.Name = "BtnXoa";
             this.BtnXoa.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnXoa_ItemClick);
             // 
+            // btnOptionIn
+            // 
+            this.btnOptionIn.Caption = "&In";
+            this.btnOptionIn.Enabled = false;
+            this.btnOptionIn.Id = 12;
+            this.btnOptionIn.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnOptionIn.ImageOptions.SvgImage")));
+            this.btnOptionIn.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.BtnIn, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnPrintA5)});
+            this.btnOptionIn.Name = "btnOptionIn";
+            // 
             // BtnIn
             // 
             this.BtnIn.Caption = "Phiếu Nhập Điều Chỉnh (A4)";
@@ -195,9 +206,16 @@ namespace VisualStudio2019.Form
             this.BtnIn.Name = "BtnIn";
             this.BtnIn.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnIn_ItemClick);
             // 
+            // btnPrintA5
+            // 
+            this.btnPrintA5.Caption = "Phiếu Nhập Điều Chỉnh (A5)";
+            this.btnPrintA5.Id = 13;
+            this.btnPrintA5.Name = "btnPrintA5";
+            this.btnPrintA5.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnPrintA5_ItemClick);
+            // 
             // BtnExcel
             // 
-            this.BtnExcel.Caption = "Excel";
+            this.BtnExcel.Caption = "Xuất Excel";
             this.BtnExcel.Enabled = false;
             this.BtnExcel.Id = 5;
             this.BtnExcel.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("BtnExcel.ImageOptions.SvgImage")));
@@ -206,7 +224,7 @@ namespace VisualStudio2019.Form
             // 
             // BtnNap
             // 
-            this.BtnNap.Caption = "Nạp";
+            this.BtnNap.Caption = "Nạp Lại";
             this.BtnNap.Id = 6;
             this.BtnNap.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("BtnNap.ImageOptions.SvgImage")));
             this.BtnNap.Name = "BtnNap";
@@ -487,8 +505,10 @@ namespace VisualStudio2019.Form
             // 
             // gridColumn11
             // 
-            this.gridColumn11.AppearanceCell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.gridColumn11.AppearanceCell.Options.UseBackColor = true;
+            this.gridColumn11.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
+            this.gridColumn11.AppearanceCell.ForeColor = System.Drawing.Color.Green;
+            this.gridColumn11.AppearanceCell.Options.UseFont = true;
+            this.gridColumn11.AppearanceCell.Options.UseForeColor = true;
             this.gridColumn11.AppearanceHeader.Options.UseTextOptions = true;
             this.gridColumn11.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.gridColumn11.Caption = "Thanh toán";
@@ -814,24 +834,6 @@ namespace VisualStudio2019.Form
             // xtraSaveFileDialog1
             // 
             this.xtraSaveFileDialog1.FileName = "xtraSaveFileDialog1";
-            // 
-            // btnOptionIn
-            // 
-            this.btnOptionIn.Caption = "&In";
-            this.btnOptionIn.Enabled = false;
-            this.btnOptionIn.Id = 12;
-            this.btnOptionIn.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnOptionIn.ImageOptions.SvgImage")));
-            this.btnOptionIn.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.BtnIn, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnPrintA5)});
-            this.btnOptionIn.Name = "btnOptionIn";
-            // 
-            // btnPrintA5
-            // 
-            this.btnPrintA5.Caption = "Phiếu Nhập Điều Chỉnh (A5)";
-            this.btnPrintA5.Id = 13;
-            this.btnPrintA5.Name = "btnPrintA5";
-            this.btnPrintA5.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnPrintA5_ItemClick);
             // 
             // Form_Phieunhap_dieuchinh
             // 

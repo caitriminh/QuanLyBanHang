@@ -33,12 +33,15 @@ namespace VisualStudio2019.Form
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Sanpham));
             DevExpress.XtraGrid.GridFormatRule gridFormatRule1 = new DevExpress.XtraGrid.GridFormatRule();
             DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue1 = new DevExpress.XtraEditors.FormatConditionRuleValue();
+            DevExpress.XtraGrid.GridFormatRule gridFormatRule2 = new DevExpress.XtraGrid.GridFormatRule();
+            DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue2 = new DevExpress.XtraEditors.FormatConditionRuleValue();
             this.colTinhTrang = new DevExpress.XtraGrid.Columns.GridColumn();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar2 = new DevExpress.XtraBars.Bar();
             this.btnOptionThem = new DevExpress.XtraBars.BarSubItem();
             this.BtnThem = new DevExpress.XtraBars.BarButtonItem();
             this.btnImportExcel = new DevExpress.XtraBars.BarButtonItem();
+            this.BtnImportExcel2 = new DevExpress.XtraBars.BarButtonItem();
             this.BtnSua = new DevExpress.XtraBars.BarButtonItem();
             this.BtnXoa = new DevExpress.XtraBars.BarButtonItem();
             this.BtnIn = new DevExpress.XtraBars.BarButtonItem();
@@ -57,6 +60,7 @@ namespace VisualStudio2019.Form
             this.btnCapNhatChiecKhau = new DevExpress.XtraBars.BarButtonItem();
             this.btnCapNhatGiaBan = new DevExpress.XtraBars.BarButtonItem();
             this.btnXoaAnhSP = new DevExpress.XtraBars.BarButtonItem();
+            this.barSubItem1 = new DevExpress.XtraBars.BarSubItem();
             this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
             this.grcSanPham = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -71,6 +75,7 @@ namespace VisualStudio2019.Form
             this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn12 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.lbl_ID = new DevExpress.XtraEditors.LabelControl();
             this.xtraSaveFileDialog1 = new DevExpress.XtraEditors.XtraSaveFileDialog(this.components);
             this.xtraOpenFileDialog1 = new DevExpress.XtraEditors.XtraOpenFileDialog(this.components);
@@ -91,7 +96,6 @@ namespace VisualStudio2019.Form
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.gridColumn12 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grcSanPham)).BeginInit();
@@ -159,9 +163,11 @@ namespace VisualStudio2019.Form
             this.btnCapNhatChiecKhau,
             this.btnCapNhatGiaBan,
             this.chkTatCa,
-            this.btnXoaAnhSP});
+            this.btnXoaAnhSP,
+            this.barSubItem1,
+            this.BtnImportExcel2});
             this.barManager1.MainMenu = this.bar2;
-            this.barManager1.MaxItemId = 17;
+            this.barManager1.MaxItemId = 19;
             // 
             // bar2
             // 
@@ -185,7 +191,6 @@ namespace VisualStudio2019.Form
             // btnOptionThem
             // 
             this.btnOptionThem.Caption = "&Thêm";
-            this.btnOptionThem.Enabled = false;
             this.btnOptionThem.Id = 12;
             this.btnOptionThem.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnOptionThem.ImageOptions.SvgImage")));
             this.btnOptionThem.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
@@ -206,6 +211,13 @@ namespace VisualStudio2019.Form
             this.btnImportExcel.Id = 10;
             this.btnImportExcel.Name = "btnImportExcel";
             this.btnImportExcel.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnImportExcel_ItemClick);
+            // 
+            // BtnImportExcel2
+            // 
+            this.BtnImportExcel2.Caption = "Nhập sản phẩm từ Excel 2";
+            this.BtnImportExcel2.Id = 18;
+            this.BtnImportExcel2.Name = "BtnImportExcel2";
+            this.BtnImportExcel2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnImportExcel2_ItemClick);
             // 
             // BtnSua
             // 
@@ -236,7 +248,7 @@ namespace VisualStudio2019.Form
             // 
             // Excel
             // 
-            this.Excel.Caption = "Excel";
+            this.Excel.Caption = "Xuất Excel";
             this.Excel.Enabled = false;
             this.Excel.Id = 8;
             this.Excel.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("Excel.ImageOptions.SvgImage")));
@@ -261,7 +273,7 @@ namespace VisualStudio2019.Form
             // 
             // BtnNap
             // 
-            this.BtnNap.Caption = "Nạp";
+            this.BtnNap.Caption = "Nạp Lại";
             this.BtnNap.Id = 6;
             this.BtnNap.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("BtnNap.ImageOptions.SvgImage")));
             this.BtnNap.Name = "BtnNap";
@@ -282,7 +294,7 @@ namespace VisualStudio2019.Form
             this.chkTatCa.CheckBoxVisibility = DevExpress.XtraBars.CheckBoxVisibility.BeforeText;
             this.chkTatCa.Id = 15;
             this.chkTatCa.Name = "chkTatCa";
-            this.chkTatCa.CheckedChanged += new DevExpress.XtraBars.ItemClickEventHandler(this.chkTatCa_CheckedChanged);
+            this.chkTatCa.CheckedChanged += new DevExpress.XtraBars.ItemClickEventHandler(this.ChkTatCa_CheckedChanged);
             // 
             // barDockControlTop
             // 
@@ -350,7 +362,7 @@ namespace VisualStudio2019.Form
             this.btnCapNhatGiaBan.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnCapNhatGiaBan.ImageOptions.SvgImage")));
             this.btnCapNhatGiaBan.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
             this.btnCapNhatGiaBan.Name = "btnCapNhatGiaBan";
-            this.btnCapNhatGiaBan.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnCapNhatGiaBan_ItemClick);
+            this.btnCapNhatGiaBan.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnCapNhatGiaBan_ItemClick);
             // 
             // btnXoaAnhSP
             // 
@@ -358,7 +370,14 @@ namespace VisualStudio2019.Form
             this.btnXoaAnhSP.Id = 16;
             this.btnXoaAnhSP.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnXoaAnhSP.ImageOptions.SvgImage")));
             this.btnXoaAnhSP.Name = "btnXoaAnhSP";
-            this.btnXoaAnhSP.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnXoaAnhSP_ItemClick);
+            this.btnXoaAnhSP.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnXoaAnhSP_ItemClick);
+            // 
+            // barSubItem1
+            // 
+            this.barSubItem1.Caption = "&Thêm";
+            this.barSubItem1.Id = 17;
+            this.barSubItem1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barSubItem1.ImageOptions.SvgImage")));
+            this.barSubItem1.Name = "barSubItem1";
             // 
             // popupMenu1
             // 
@@ -376,12 +395,12 @@ namespace VisualStudio2019.Form
             this.grcSanPham.MainView = this.gridView1;
             this.grcSanPham.MenuManager = this.barManager1;
             this.grcSanPham.Name = "grcSanPham";
-            this.grcSanPham.Size = new System.Drawing.Size(1112, 619);
+            this.grcSanPham.Size = new System.Drawing.Size(1487, 619);
             this.grcSanPham.TabIndex = 10;
             this.grcSanPham.UseEmbeddedNavigator = true;
             this.grcSanPham.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
-            this.grcSanPham.DoubleClick += new System.EventHandler(this.grcSanPham_DoubleClick);
+            this.grcSanPham.DoubleClick += new System.EventHandler(this.GrcSanPham_DoubleClick);
             // 
             // gridView1
             // 
@@ -399,15 +418,26 @@ namespace VisualStudio2019.Form
             this.gridColumn2,
             this.gridColumn11,
             this.gridColumn12});
-            gridFormatRule1.ApplyToRow = true;
             gridFormatRule1.Column = this.colTinhTrang;
             gridFormatRule1.Name = "Format0";
-            formatConditionRuleValue1.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            formatConditionRuleValue1.Appearance.Options.UseBackColor = true;
+            formatConditionRuleValue1.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            formatConditionRuleValue1.Appearance.ForeColor = System.Drawing.Color.Red;
+            formatConditionRuleValue1.Appearance.Options.UseFont = true;
+            formatConditionRuleValue1.Appearance.Options.UseForeColor = true;
             formatConditionRuleValue1.Condition = DevExpress.XtraEditors.FormatCondition.Expression;
-            formatConditionRuleValue1.Expression = "[TinhTrang] = \'Đã hủy\'";
+            formatConditionRuleValue1.Expression = "[TinhTrang] = \'Không sử dụng\'";
             gridFormatRule1.Rule = formatConditionRuleValue1;
+            gridFormatRule2.Column = this.colTinhTrang;
+            gridFormatRule2.Name = "Format1";
+            formatConditionRuleValue2.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            formatConditionRuleValue2.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            formatConditionRuleValue2.Appearance.Options.UseFont = true;
+            formatConditionRuleValue2.Appearance.Options.UseForeColor = true;
+            formatConditionRuleValue2.Condition = DevExpress.XtraEditors.FormatCondition.Expression;
+            formatConditionRuleValue2.Expression = "[TinhTrang] = \'Khả dụng\'";
+            gridFormatRule2.Rule = formatConditionRuleValue2;
             this.gridView1.FormatRules.Add(gridFormatRule1);
+            this.gridView1.FormatRules.Add(gridFormatRule2);
             this.gridView1.GridControl = this.grcSanPham;
             this.gridView1.GroupCount = 1;
             this.gridView1.Name = "gridView1";
@@ -422,7 +452,7 @@ namespace VisualStudio2019.Form
             this.gridView1.OptionsView.ShowGroupPanel = false;
             this.gridView1.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
             new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.gridColumn4, DevExpress.Data.ColumnSortOrder.Ascending)});
-            this.gridView1.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridView1_FocusedRowChanged);
+            this.gridView1.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.GridView1_FocusedRowChanged);
             // 
             // gridColumn1
             // 
@@ -554,6 +584,18 @@ namespace VisualStudio2019.Form
             this.gridColumn11.VisibleIndex = 3;
             this.gridColumn11.Width = 152;
             // 
+            // gridColumn12
+            // 
+            this.gridColumn12.Caption = "Loại hàng";
+            this.gridColumn12.FieldName = "LoaiHang";
+            this.gridColumn12.MinWidth = 25;
+            this.gridColumn12.Name = "gridColumn12";
+            this.gridColumn12.OptionsColumn.FixedWidth = true;
+            this.gridColumn12.OptionsColumn.ReadOnly = true;
+            this.gridColumn12.Visible = true;
+            this.gridColumn12.VisibleIndex = 5;
+            this.gridColumn12.Width = 103;
+            // 
             // lbl_ID
             // 
             this.lbl_ID.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
@@ -572,6 +614,7 @@ namespace VisualStudio2019.Form
             // 
             // splitContainerControl1
             // 
+            this.splitContainerControl1.Collapsed = true;
             this.splitContainerControl1.CollapsePanel = DevExpress.XtraEditors.SplitCollapsePanel.Panel1;
             this.splitContainerControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainerControl1.Location = new System.Drawing.Point(0, 34);
@@ -602,58 +645,58 @@ namespace VisualStudio2019.Form
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.Root;
-            this.layoutControl1.Size = new System.Drawing.Size(375, 619);
+            this.layoutControl1.Size = new System.Drawing.Size(0, 0);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
             // txtNhomSP
             // 
-            this.txtNhomSP.Location = new System.Drawing.Point(111, 310);
+            this.txtNhomSP.Location = new System.Drawing.Point(111, 117);
             this.txtNhomSP.MenuManager = this.barManager1;
             this.txtNhomSP.Name = "txtNhomSP";
             this.txtNhomSP.Properties.ReadOnly = true;
-            this.txtNhomSP.Size = new System.Drawing.Size(250, 23);
+            this.txtNhomSP.Size = new System.Drawing.Size(62, 23);
             this.txtNhomSP.StyleController = this.layoutControl1;
             this.txtNhomSP.TabIndex = 9;
             // 
             // txtQuyCach
             // 
-            this.txtQuyCach.Location = new System.Drawing.Point(111, 364);
+            this.txtQuyCach.Location = new System.Drawing.Point(111, 171);
             this.txtQuyCach.MenuManager = this.barManager1;
             this.txtQuyCach.Name = "txtQuyCach";
             this.txtQuyCach.Properties.ReadOnly = true;
-            this.txtQuyCach.Size = new System.Drawing.Size(250, 23);
+            this.txtQuyCach.Size = new System.Drawing.Size(62, 23);
             this.txtQuyCach.StyleController = this.layoutControl1;
             this.txtQuyCach.TabIndex = 8;
             // 
             // txtLoaiSP
             // 
-            this.txtLoaiSP.Location = new System.Drawing.Point(111, 337);
+            this.txtLoaiSP.Location = new System.Drawing.Point(111, 144);
             this.txtLoaiSP.MenuManager = this.barManager1;
             this.txtLoaiSP.Name = "txtLoaiSP";
             this.txtLoaiSP.Properties.ReadOnly = true;
-            this.txtLoaiSP.Size = new System.Drawing.Size(250, 23);
+            this.txtLoaiSP.Size = new System.Drawing.Size(62, 23);
             this.txtLoaiSP.StyleController = this.layoutControl1;
             this.txtLoaiSP.TabIndex = 7;
             // 
             // txtMaSP
             // 
-            this.txtMaSP.Location = new System.Drawing.Point(111, 256);
+            this.txtMaSP.Location = new System.Drawing.Point(111, 63);
             this.txtMaSP.MenuManager = this.barManager1;
             this.txtMaSP.Name = "txtMaSP";
             this.txtMaSP.Properties.ReadOnly = true;
-            this.txtMaSP.Size = new System.Drawing.Size(250, 23);
+            this.txtMaSP.Size = new System.Drawing.Size(62, 23);
             this.txtMaSP.StyleController = this.layoutControl1;
             this.txtMaSP.TabIndex = 6;
             this.txtMaSP.TextChanged += new System.EventHandler(this.txtMaSP_TextChanged);
             // 
             // txtTenSP
             // 
-            this.txtTenSP.Location = new System.Drawing.Point(111, 283);
+            this.txtTenSP.Location = new System.Drawing.Point(111, 90);
             this.txtTenSP.MenuManager = this.barManager1;
             this.txtTenSP.Name = "txtTenSP";
             this.txtTenSP.Properties.ReadOnly = true;
-            this.txtTenSP.Size = new System.Drawing.Size(250, 23);
+            this.txtTenSP.Size = new System.Drawing.Size(62, 23);
             this.txtTenSP.StyleController = this.layoutControl1;
             this.txtTenSP.TabIndex = 5;
             // 
@@ -664,7 +707,7 @@ namespace VisualStudio2019.Form
             this.pictureEdit1.Name = "pictureEdit1";
             this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.pictureEdit1.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.pictureEdit1.Size = new System.Drawing.Size(347, 213);
+            this.pictureEdit1.Size = new System.Drawing.Size(159, 20);
             this.pictureEdit1.StyleController = this.layoutControl1;
             this.pictureEdit1.TabIndex = 4;
             this.pictureEdit1.DoubleClick += new System.EventHandler(this.pictureEdit1_DoubleClick);
@@ -677,7 +720,7 @@ namespace VisualStudio2019.Form
             this.layoutControlGroup1});
             this.Root.Name = "Root";
             this.Root.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-            this.Root.Size = new System.Drawing.Size(375, 619);
+            this.Root.Size = new System.Drawing.Size(187, 218);
             this.Root.TextVisible = false;
             // 
             // layoutControlGroup1
@@ -692,15 +735,15 @@ namespace VisualStudio2019.Form
             this.layoutControlItem6});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(375, 619);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(187, 218);
             this.layoutControlGroup1.Text = "Thông Tin Sản Phẩm";
             // 
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.txtTenSP;
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 244);
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 51);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(351, 27);
+            this.layoutControlItem2.Size = new System.Drawing.Size(163, 27);
             this.layoutControlItem2.Text = "Tên sản phẩm";
             this.layoutControlItem2.TextSize = new System.Drawing.Size(93, 16);
             // 
@@ -709,65 +752,53 @@ namespace VisualStudio2019.Form
             this.layoutControlItem1.Control = this.pictureEdit1;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(351, 217);
+            this.layoutControlItem1.Size = new System.Drawing.Size(163, 24);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 352);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 159);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(351, 218);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(163, 10);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.txtMaSP;
-            this.layoutControlItem3.Location = new System.Drawing.Point(0, 217);
+            this.layoutControlItem3.Location = new System.Drawing.Point(0, 24);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(351, 27);
+            this.layoutControlItem3.Size = new System.Drawing.Size(163, 27);
             this.layoutControlItem3.Text = "Mã sản phẩm";
             this.layoutControlItem3.TextSize = new System.Drawing.Size(93, 16);
             // 
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.txtLoaiSP;
-            this.layoutControlItem4.Location = new System.Drawing.Point(0, 298);
+            this.layoutControlItem4.Location = new System.Drawing.Point(0, 105);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(351, 27);
+            this.layoutControlItem4.Size = new System.Drawing.Size(163, 27);
             this.layoutControlItem4.Text = "Loại sản phẩm";
             this.layoutControlItem4.TextSize = new System.Drawing.Size(93, 16);
             // 
             // layoutControlItem5
             // 
             this.layoutControlItem5.Control = this.txtQuyCach;
-            this.layoutControlItem5.Location = new System.Drawing.Point(0, 325);
+            this.layoutControlItem5.Location = new System.Drawing.Point(0, 132);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(351, 27);
+            this.layoutControlItem5.Size = new System.Drawing.Size(163, 27);
             this.layoutControlItem5.Text = "Quy cách";
             this.layoutControlItem5.TextSize = new System.Drawing.Size(93, 16);
             // 
             // layoutControlItem6
             // 
             this.layoutControlItem6.Control = this.txtNhomSP;
-            this.layoutControlItem6.Location = new System.Drawing.Point(0, 271);
+            this.layoutControlItem6.Location = new System.Drawing.Point(0, 78);
             this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(351, 27);
+            this.layoutControlItem6.Size = new System.Drawing.Size(163, 27);
             this.layoutControlItem6.Text = "Nhóm sản phẩm";
             this.layoutControlItem6.TextSize = new System.Drawing.Size(93, 16);
-            // 
-            // gridColumn12
-            // 
-            this.gridColumn12.Caption = "Loại hàng";
-            this.gridColumn12.FieldName = "LoaiHang";
-            this.gridColumn12.MinWidth = 25;
-            this.gridColumn12.Name = "gridColumn12";
-            this.gridColumn12.OptionsColumn.FixedWidth = true;
-            this.gridColumn12.OptionsColumn.ReadOnly = true;
-            this.gridColumn12.Visible = true;
-            this.gridColumn12.VisibleIndex = 5;
-            this.gridColumn12.Width = 103;
             // 
             // Form_Sanpham
             // 
@@ -877,5 +908,7 @@ namespace VisualStudio2019.Form
         private DevExpress.XtraEditors.TextEdit txtNhomSP;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn12;
+        private DevExpress.XtraBars.BarSubItem barSubItem1;
+        private DevExpress.XtraBars.BarButtonItem BtnImportExcel2;
     }
 }

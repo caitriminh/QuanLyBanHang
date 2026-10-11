@@ -31,8 +31,6 @@ namespace VisualStudio2019.Form
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Khachhang));
-            DevExpress.XtraGrid.GridFormatRule gridFormatRule1 = new DevExpress.XtraGrid.GridFormatRule();
-            DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue1 = new DevExpress.XtraEditors.FormatConditionRuleValue();
             this.colTongSo = new DevExpress.XtraGrid.Columns.GridColumn();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar2 = new DevExpress.XtraBars.Bar();
@@ -69,6 +67,11 @@ namespace VisualStudio2019.Form
             this.gridColumn13 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn14 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn15 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn16 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn17 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn18 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn19 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn20 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.lblMaKH = new DevExpress.XtraEditors.LabelControl();
             this.xtraOpenFileDialog1 = new DevExpress.XtraEditors.XtraOpenFileDialog(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
@@ -188,7 +191,7 @@ namespace VisualStudio2019.Form
             // 
             // btnOptionExcel
             // 
-            this.btnOptionExcel.Caption = "Excel";
+            this.btnOptionExcel.Caption = "Xuất Excel";
             this.btnOptionExcel.Enabled = false;
             this.btnOptionExcel.Id = 9;
             this.btnOptionExcel.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnOptionExcel.ImageOptions.SvgImage")));
@@ -213,7 +216,7 @@ namespace VisualStudio2019.Form
             // 
             // BtnNap
             // 
-            this.BtnNap.Caption = "Nạp";
+            this.BtnNap.Caption = "Nạp Lại";
             this.BtnNap.Id = 6;
             this.BtnNap.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("BtnNap.ImageOptions.SvgImage")));
             this.BtnNap.Name = "BtnNap";
@@ -299,16 +302,13 @@ namespace VisualStudio2019.Form
             this.gridColumn13,
             this.gridColumn14,
             this.colTongSo,
-            this.gridColumn15});
-            gridFormatRule1.ApplyToRow = true;
-            gridFormatRule1.Column = this.colTongSo;
-            gridFormatRule1.Name = "Format0";
-            formatConditionRuleValue1.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            formatConditionRuleValue1.Appearance.Options.UseBackColor = true;
-            formatConditionRuleValue1.Condition = DevExpress.XtraEditors.FormatCondition.Expression;
-            formatConditionRuleValue1.Expression = "[TongSo] = 0";
-            gridFormatRule1.Rule = formatConditionRuleValue1;
-            this.gvKhachHang.FormatRules.Add(gridFormatRule1);
+            this.gridColumn15,
+            this.gridColumn16,
+            this.gridColumn17,
+            this.gridColumn18,
+            this.gridColumn19,
+            this.gridColumn20});
+            this.gvKhachHang.FixedLineWidth = 3;
             this.gvKhachHang.GridControl = this.grcKhachHang;
             this.gvKhachHang.GroupCount = 1;
             this.gvKhachHang.Name = "gvKhachHang";
@@ -412,7 +412,7 @@ namespace VisualStudio2019.Form
             this.gridColumn9.Name = "gridColumn9";
             this.gridColumn9.OptionsColumn.FixedWidth = true;
             this.gridColumn9.Visible = true;
-            this.gridColumn9.VisibleIndex = 12;
+            this.gridColumn9.VisibleIndex = 17;
             this.gridColumn9.Width = 250;
             // 
             // gridColumn10
@@ -436,7 +436,7 @@ namespace VisualStudio2019.Form
             this.gridColumn8.OptionsColumn.FixedWidth = true;
             this.gridColumn8.OptionsColumn.ReadOnly = true;
             this.gridColumn8.Visible = true;
-            this.gridColumn8.VisibleIndex = 13;
+            this.gridColumn8.VisibleIndex = 18;
             this.gridColumn8.Width = 160;
             // 
             // gridColumn11
@@ -448,7 +448,7 @@ namespace VisualStudio2019.Form
             this.gridColumn11.OptionsColumn.FixedWidth = true;
             this.gridColumn11.OptionsColumn.ReadOnly = true;
             this.gridColumn11.Visible = true;
-            this.gridColumn11.VisibleIndex = 14;
+            this.gridColumn11.VisibleIndex = 19;
             this.gridColumn11.Width = 130;
             // 
             // gridColumn12
@@ -462,7 +462,7 @@ namespace VisualStudio2019.Form
             this.gridColumn12.OptionsColumn.FixedWidth = true;
             this.gridColumn12.OptionsColumn.ReadOnly = true;
             this.gridColumn12.Visible = true;
-            this.gridColumn12.VisibleIndex = 15;
+            this.gridColumn12.VisibleIndex = 20;
             this.gridColumn12.Width = 160;
             // 
             // gridColumn13
@@ -474,7 +474,7 @@ namespace VisualStudio2019.Form
             this.gridColumn13.OptionsColumn.FixedWidth = true;
             this.gridColumn13.OptionsColumn.ReadOnly = true;
             this.gridColumn13.Visible = true;
-            this.gridColumn13.VisibleIndex = 16;
+            this.gridColumn13.VisibleIndex = 21;
             this.gridColumn13.Width = 130;
             // 
             // gridColumn14
@@ -500,6 +500,66 @@ namespace VisualStudio2019.Form
             this.gridColumn15.Visible = true;
             this.gridColumn15.VisibleIndex = 6;
             this.gridColumn15.Width = 215;
+            // 
+            // gridColumn16
+            // 
+            this.gridColumn16.Caption = "Người đại diện";
+            this.gridColumn16.FieldName = "NguoiDaiDien";
+            this.gridColumn16.MinWidth = 23;
+            this.gridColumn16.Name = "gridColumn16";
+            this.gridColumn16.OptionsColumn.FixedWidth = true;
+            this.gridColumn16.OptionsColumn.ReadOnly = true;
+            this.gridColumn16.Visible = true;
+            this.gridColumn16.VisibleIndex = 12;
+            this.gridColumn16.Width = 140;
+            // 
+            // gridColumn17
+            // 
+            this.gridColumn17.Caption = "Số ĐT NĐD";
+            this.gridColumn17.FieldName = "SoDTNguoiDaiDien";
+            this.gridColumn17.MinWidth = 23;
+            this.gridColumn17.Name = "gridColumn17";
+            this.gridColumn17.OptionsColumn.FixedWidth = true;
+            this.gridColumn17.OptionsColumn.ReadOnly = true;
+            this.gridColumn17.Visible = true;
+            this.gridColumn17.VisibleIndex = 13;
+            this.gridColumn17.Width = 101;
+            // 
+            // gridColumn18
+            // 
+            this.gridColumn18.Caption = "Chức vụ";
+            this.gridColumn18.FieldName = "ChucVu";
+            this.gridColumn18.MinWidth = 23;
+            this.gridColumn18.Name = "gridColumn18";
+            this.gridColumn18.OptionsColumn.FixedWidth = true;
+            this.gridColumn18.OptionsColumn.ReadOnly = true;
+            this.gridColumn18.Visible = true;
+            this.gridColumn18.VisibleIndex = 14;
+            this.gridColumn18.Width = 109;
+            // 
+            // gridColumn19
+            // 
+            this.gridColumn19.Caption = "Người liên hệ";
+            this.gridColumn19.FieldName = "NguoiLienHe";
+            this.gridColumn19.MinWidth = 23;
+            this.gridColumn19.Name = "gridColumn19";
+            this.gridColumn19.OptionsColumn.FixedWidth = true;
+            this.gridColumn19.OptionsColumn.ReadOnly = true;
+            this.gridColumn19.Visible = true;
+            this.gridColumn19.VisibleIndex = 15;
+            this.gridColumn19.Width = 140;
+            // 
+            // gridColumn20
+            // 
+            this.gridColumn20.Caption = "Số ĐT NLH";
+            this.gridColumn20.FieldName = "SoDTNguoiLienHe";
+            this.gridColumn20.MinWidth = 23;
+            this.gridColumn20.Name = "gridColumn20";
+            this.gridColumn20.OptionsColumn.FixedWidth = true;
+            this.gridColumn20.OptionsColumn.ReadOnly = true;
+            this.gridColumn20.Visible = true;
+            this.gridColumn20.VisibleIndex = 16;
+            this.gridColumn20.Width = 101;
             // 
             // lblMaKH
             // 
@@ -577,5 +637,10 @@ namespace VisualStudio2019.Form
         private DevExpress.XtraBars.BarButtonItem btnXuatMauExcel;
         private DevExpress.XtraGrid.Columns.GridColumn colTongSo;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn15;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn16;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn17;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn18;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn19;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn20;
     }
 }

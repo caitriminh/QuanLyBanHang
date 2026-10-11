@@ -36,18 +36,18 @@ namespace VisualStudio2019.Form
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.txtMatKhau = new DevExpress.XtraEditors.TextEdit();
-            this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
+            this.picLogo = new DevExpress.XtraEditors.PictureEdit();
             this.hyperlinkLabelControl1 = new DevExpress.XtraEditors.HyperlinkLabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.txtTenDangNhap.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMatKhau.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // btnDong
             // 
             this.btnDong.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnDong.ImageOptions.SvgImage")));
             this.btnDong.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
-            this.btnDong.Location = new System.Drawing.Point(368, 176);
+            this.btnDong.Location = new System.Drawing.Point(405, 236);
             this.btnDong.Name = "btnDong";
             this.btnDong.Size = new System.Drawing.Size(106, 27);
             this.btnDong.TabIndex = 15;
@@ -58,7 +58,7 @@ namespace VisualStudio2019.Form
             // 
             this.btnLuu.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnLuu.ImageOptions.SvgImage")));
             this.btnLuu.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
-            this.btnLuu.Location = new System.Drawing.Point(256, 176);
+            this.btnLuu.Location = new System.Drawing.Point(293, 236);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(106, 27);
             this.btnLuu.TabIndex = 14;
@@ -68,14 +68,14 @@ namespace VisualStudio2019.Form
             // txtTenDangNhap
             // 
             this.txtTenDangNhap.EditValue = "admin";
-            this.txtTenDangNhap.Location = new System.Drawing.Point(112, 114);
+            this.txtTenDangNhap.Location = new System.Drawing.Point(116, 174);
             this.txtTenDangNhap.Name = "txtTenDangNhap";
-            this.txtTenDangNhap.Size = new System.Drawing.Size(362, 23);
+            this.txtTenDangNhap.Size = new System.Drawing.Size(395, 23);
             this.txtTenDangNhap.TabIndex = 18;
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(10, 117);
+            this.labelControl1.Location = new System.Drawing.Point(14, 177);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(86, 16);
             this.labelControl1.TabIndex = 19;
@@ -83,7 +83,7 @@ namespace VisualStudio2019.Form
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(10, 150);
+            this.labelControl2.Location = new System.Drawing.Point(14, 210);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(52, 16);
             this.labelControl2.TabIndex = 20;
@@ -92,25 +92,25 @@ namespace VisualStudio2019.Form
             // txtMatKhau
             // 
             this.txtMatKhau.EditValue = "456";
-            this.txtMatKhau.Location = new System.Drawing.Point(112, 147);
+            this.txtMatKhau.Location = new System.Drawing.Point(116, 207);
             this.txtMatKhau.Name = "txtMatKhau";
             this.txtMatKhau.Properties.PasswordChar = '*';
-            this.txtMatKhau.Size = new System.Drawing.Size(362, 23);
+            this.txtMatKhau.Size = new System.Drawing.Size(395, 23);
             this.txtMatKhau.TabIndex = 21;
             // 
-            // pictureEdit1
+            // picLogo
             // 
-            this.pictureEdit1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pictureEdit1.Location = new System.Drawing.Point(0, 0);
-            this.pictureEdit1.Name = "pictureEdit1";
-            this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pictureEdit1.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.pictureEdit1.Size = new System.Drawing.Size(486, 96);
-            this.pictureEdit1.TabIndex = 22;
+            this.picLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.picLogo.Location = new System.Drawing.Point(0, 0);
+            this.picLogo.Name = "picLogo";
+            this.picLogo.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.picLogo.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
+            this.picLogo.Size = new System.Drawing.Size(523, 168);
+            this.picLogo.TabIndex = 22;
             // 
             // hyperlinkLabelControl1
             // 
-            this.hyperlinkLabelControl1.Location = new System.Drawing.Point(10, 187);
+            this.hyperlinkLabelControl1.Location = new System.Drawing.Point(14, 247);
             this.hyperlinkLabelControl1.Name = "hyperlinkLabelControl1";
             this.hyperlinkLabelControl1.Size = new System.Drawing.Size(50, 16);
             this.hyperlinkLabelControl1.TabIndex = 23;
@@ -121,10 +121,10 @@ namespace VisualStudio2019.Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(486, 222);
+            this.ClientSize = new System.Drawing.Size(523, 293);
             this.ControlBox = false;
             this.Controls.Add(this.hyperlinkLabelControl1);
-            this.Controls.Add(this.pictureEdit1);
+            this.Controls.Add(this.picLogo);
             this.Controls.Add(this.txtMatKhau);
             this.Controls.Add(this.labelControl2);
             this.Controls.Add(this.labelControl1);
@@ -139,7 +139,7 @@ namespace VisualStudio2019.Form
             this.Load += new System.EventHandler(this.Form_Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtTenDangNhap.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMatKhau.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -152,7 +152,7 @@ namespace VisualStudio2019.Form
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.TextEdit txtMatKhau;
-        private DevExpress.XtraEditors.PictureEdit pictureEdit1;
+        private DevExpress.XtraEditors.PictureEdit picLogo;
         private DevExpress.XtraEditors.HyperlinkLabelControl hyperlinkLabelControl1;
     }
 }

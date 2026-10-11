@@ -32,13 +32,9 @@ namespace VisualStudio2019.Form
             BtnXoa.Enabled = data.Xoa;
             BtnSua.Enabled = data.Sua;
             BtnExcel.Enabled = data.Excel;
-            btnOptionIn.Enabled = data.InAn;           
+            btnOptionIn.Enabled = data.InAn;
         }
 
-        /// <summary>
-        /// Load danh sách hóa đơn khi có sự thay đổi form_themhoadon
-        /// </summary>
-        /// <param name="value"></param>
         private void OnNext(MessageBroker value)
         {
             if (value.task == "them_phieuxuat_nvl")
@@ -109,7 +105,7 @@ namespace VisualStudio2019.Form
             var data = ExecSQL.ExecProcedureSacalar("sp_HoaDonDelete", new
             {
                 mahd = lbl_MaHoaDon.Text
-            }); ;
+            }); 
             if (data.ToString() == "1")
             {
                 GetHoaDon(1, Convert.ToDateTime(dteTuNgay.EditValue), Convert.ToDateTime(dteDenNgay.EditValue));

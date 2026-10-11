@@ -94,8 +94,8 @@ namespace VisualStudio2019.Form
             this.gridColumn12 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn13 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn14 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.xtraSaveFileDialog1 = new DevExpress.XtraEditors.XtraSaveFileDialog(this.components);
             this.gridColumn15 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.xtraSaveFileDialog1 = new DevExpress.XtraEditors.XtraSaveFileDialog(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cboKy2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEdit1View)).BeginInit();
@@ -217,7 +217,7 @@ namespace VisualStudio2019.Form
             // 
             // BtnExcel
             // 
-            this.BtnExcel.Caption = "Excel";
+            this.BtnExcel.Caption = "Xuất Excel";
             this.BtnExcel.Enabled = false;
             this.BtnExcel.Id = 5;
             this.BtnExcel.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("BtnExcel.ImageOptions.SvgImage")));
@@ -226,7 +226,7 @@ namespace VisualStudio2019.Form
             // 
             // BtnNap
             // 
-            this.BtnNap.Caption = "Nạp";
+            this.BtnNap.Caption = "&Nạp Lại";
             this.BtnNap.Id = 6;
             this.BtnNap.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("BtnNap.ImageOptions.SvgImage")));
             this.BtnNap.Name = "BtnNap";
@@ -815,10 +815,6 @@ namespace VisualStudio2019.Form
             this.gridColumn14.VisibleIndex = 7;
             this.gridColumn14.Width = 110;
             // 
-            // xtraSaveFileDialog1
-            // 
-            this.xtraSaveFileDialog1.FileName = "xtraSaveFileDialog1";
-            // 
             // gridColumn15
             // 
             this.gridColumn15.AppearanceHeader.Options.UseTextOptions = true;
@@ -836,6 +832,10 @@ namespace VisualStudio2019.Form
             this.gridColumn15.Visible = true;
             this.gridColumn15.VisibleIndex = 3;
             this.gridColumn15.Width = 94;
+            // 
+            // xtraSaveFileDialog1
+            // 
+            this.xtraSaveFileDialog1.FileName = "xtraSaveFileDialog1";
             // 
             // Form_DonMuaHang
             // 

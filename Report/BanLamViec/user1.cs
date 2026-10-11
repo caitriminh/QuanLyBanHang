@@ -1,5 +1,6 @@
 ﻿using DevExpress.Utils;
 using DevExpress.XtraCharts;
+using DevExpress.XtraEditors;
 using System;
 using System.Data;
 using System.Threading.Tasks;
@@ -19,54 +20,53 @@ namespace QuanLyBanHang.Report.BanLamViec
 
         private void user1_Load(object sender, EventArgs e)
         {
-            try
-            {
-                GetChart();
-            }
-            catch
-            {
-
-            }
-
-          
+            GetChart();
         }
 
         public async void GetChart()
         {
-            chartControl1.Series.Clear();
-            var dataTable = ExecSQL.ExecProcedureDataAsDataTable("spThongKeDoanhSo", new
+            try
             {
-                TuNgay = Convert.ToDateTime(dteFromDate.EditValue),
-                DenNgay = Convert.ToDateTime(dteToDate.EditValue)
-            });
-            await Task.Factory.StartNew(new Action(() =>
-            {
-
-                chartControl1.DataSource = dataTable;
-                chartControl1.BeginInvoke(new Action(() =>
+                chartControl1.Series.Clear();
+                var dataTable = ExecSQL.ExecProcedureDataAsDataTable("spThongKeDoanhSo", new
                 {
-                    Series seriesGiatri = new Series("Doanh số", ViewType.Bar);
-                    seriesGiatri.LabelsVisibility = DefaultBoolean.True;
+                    TuNgay = Convert.ToDateTime(dteFromDate.EditValue),
+                    DenNgay = Convert.ToDateTime(dteToDate.EditValue)
+                });
+                await Task.Factory.StartNew(new Action(() =>
+                {
 
-                    foreach (DataRow dr in dataTable.Rows)
+                    chartControl1.DataSource = dataTable;
+                    chartControl1.BeginInvoke(new Action(() =>
                     {
-                        seriesGiatri.Points.Add(new SeriesPoint(dr["ThangNam"], dr["ThanhTien"]));
-                    }
+                        Series seriesGiatri = new Series("Doanh số", ViewType.Bar);
+                        seriesGiatri.LabelsVisibility = DefaultBoolean.True;
 
-                    seriesGiatri.Label.TextPattern = "{V:#,##0}";
+                        foreach (DataRow dr in dataTable.Rows)
+                        {
+                            seriesGiatri.Points.Add(new SeriesPoint(dr["ThangNam"], dr["ThanhTien"]));
+                        }
 
-                    chartControl1.Series.AddRange(new[] { seriesGiatri });
-                    chartControl1.Legend.Visibility = DefaultBoolean.True;
+                        seriesGiatri.Label.TextPattern = "{V:#,##0}";
 
-                    Legend legend = chartControl1.Legend;
-                    // chartControl1.Legend.AlignmentVertical = LegendAlignmentVertical.Center
-                    legend.Margins.All = 8;
-                    legend.AlignmentHorizontal = LegendAlignmentHorizontal.Right;
-                    legend.AlignmentVertical = LegendAlignmentVertical.Top;
-                    legend.Direction = LegendDirection.LeftToRight;
+                        chartControl1.Series.AddRange(new[] { seriesGiatri });
+                        chartControl1.Legend.Visibility = DefaultBoolean.True;
 
+                        Legend legend = chartControl1.Legend;
+                        // chartControl1.Legend.AlignmentVertical = LegendAlignmentVertical.Center
+                        legend.Margins.All = 8;
+                        legend.AlignmentHorizontal = LegendAlignmentHorizontal.Right;
+                        legend.AlignmentVertical = LegendAlignmentVertical.Top;
+                        legend.Direction = LegendDirection.LeftToRight;
+
+                    }));
                 }));
-            }));
+            }
+            catch (Exception ex)
+            {
+              
+            }
+            
         }
 
         private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

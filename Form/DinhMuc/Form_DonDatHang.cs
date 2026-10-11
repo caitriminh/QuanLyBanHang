@@ -232,7 +232,7 @@ namespace VisualStudio2019.Form
             GetDondatHang(option, Convert.ToDateTime(dteTuNgay.EditValue), Convert.ToDateTime(dteDenNgay.EditValue));
         }
 
-        private void grcDonDatHang_DoubleClick(object sender, EventArgs e)
+        private void GrcDonDatHang_DoubleClick(object sender, EventArgs e)
         {
             if (BtnSua.Enabled == false) return;
             Form_Template.strMaDonDatHang = lbl_MaDonHang.Text;
@@ -247,7 +247,7 @@ namespace VisualStudio2019.Form
             GetKy();
         }
 
-        private void gridView1_RowCellClick(object sender, DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs e)
+        private void GridView1_RowCellClick(object sender, DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs e)
         {           
             if(e.Column == colXacNhan)
             {
@@ -271,7 +271,7 @@ namespace VisualStudio2019.Form
             }
         }
 
-        private void btnInDonHangA5_ItemClick(object sender, ItemClickEventArgs e)
+        private void BtnInDonHangA5_ItemClick(object sender, ItemClickEventArgs e)
         {
             Form_Template.dtReport = ExecSQL.ExecProcedureDataAsDataTable("sp_ChiTietDonDatHang", new
             {
@@ -303,7 +303,7 @@ namespace VisualStudio2019.Form
         }
 
 
-        private void xtraTabControl1_SelectedPageChanged(object sender, DevExpress.XtraTab.TabPageChangedEventArgs e)
+        private void XtraTabControl1_SelectedPageChanged(object sender, DevExpress.XtraTab.TabPageChangedEventArgs e)
         {          
             if (xtraTabControl1.SelectedTabPage == xtraTabPage2)
             {
@@ -330,7 +330,7 @@ namespace VisualStudio2019.Form
             }
         }
 
-        private void btninlenhsanxuat_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void Btninlenhsanxuat_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             if (gvCTDonHang.SelectedRowsCount == 0)
             {
@@ -354,7 +354,7 @@ namespace VisualStudio2019.Form
             frm.Show();
         }
 
-        private void btnInGiaoNhan_ItemClick(object sender, ItemClickEventArgs e)
+        private void BtnInGiaoNhan_ItemClick(object sender, ItemClickEventArgs e)
         {
             if (gvCTDonHang.SelectedRowsCount == 0)
             {
@@ -378,7 +378,7 @@ namespace VisualStudio2019.Form
             frm.Show();
         }
 
-        private void btnInDonHangTaiTro_ItemClick(object sender, ItemClickEventArgs e)
+        private void BtnInDonHangTaiTro_ItemClick(object sender, ItemClickEventArgs e)
         {
             Form_Template.dtReport = ExecSQL.ExecProcedureDataAsDataTable("sp_ChiTietDonDatHang", new
             {
@@ -395,7 +395,7 @@ namespace VisualStudio2019.Form
             frm.Show();
         }
 
-        private void btnThemDHTaiTro_ItemClick(object sender, ItemClickEventArgs e)
+        private void BtnThemDHTaiTro_ItemClick(object sender, ItemClickEventArgs e)
         {
             Form_Template.Edit = false;
             Form_ThemDonTaiTro frm = new Form_ThemDonTaiTro();
@@ -409,7 +409,7 @@ namespace VisualStudio2019.Form
             frm.ShowDialog();
         }
 
-        private void btnReportDonHangQuatang_ItemClick(object sender, ItemClickEventArgs e)
+        private void BtnReportDonHangQuatang_ItemClick(object sender, ItemClickEventArgs e)
         {
             Form_Template.dtReport = ExecSQL.ExecProcedureDataAsDataTable("sp_ChiTietDonDatHang", new
             {

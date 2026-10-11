@@ -31,29 +31,28 @@ namespace VisualStudio2019.Form
             BtnIn.Enabled = data.InAn;
         }
 
-        public void GetTenSP()
-        {
-            var lstSP = ExecSQL.ExecProcedureDataAsDataTable("sp_SanPhamSelect");
-            cboTenSanPham.Properties.DataSource = lstSP;
-            cboTenSanPham.Properties.DisplayMember = "TenSanPham";
-            cboTenSanPham.Properties.ValueMember = "ID";
-        }
+        //public void GetTenSP()
+        //{
+        //    var lstSP = ExecSQL.ExecProcedureDataAsDataTable("sp_SanPhamSelect");
+        //    cboTenSanPham.Properties.DataSource = lstSP;
+        //    cboTenSanPham.Properties.DisplayMember = "TenSanPham";
+        //    cboTenSanPham.Properties.ValueMember = "ID";
+        //}
 
         public void GetTheKho()
         {
-            if (cboTenSanPham.EditValue==null)
-            {
-                XtraMessageBox.Show("Vui lòng chọn tên sản phẩm.", "Cảnh Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                cboTenSanPham.Focus();
-                return;
-            }
+            //if (cboTenSanPham.EditValue==null)
+            //{
+            //    XtraMessageBox.Show("Vui lòng chọn tên sản phẩm.", "Cảnh Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            //    cboTenSanPham.Focus();
+            //    return;
+            //}
             var y = gridView1.FocusedRowHandle;
             var x = gridView1.TopRowIndex;
             var lstTonKho =  ExecSQL.ExecProcedureDataAsDataTable("sp_TheKho", new
             {                
                 tungay=Convert.ToDateTime(dteTuNgay.EditValue),
-                denngay=Convert.ToDateTime(dteDenNgay.EditValue),
-                masp=Convert.ToInt32(cboTenSanPham.EditValue)
+                denngay=Convert.ToDateTime(dteDenNgay.EditValue)
                 
             });
             grcTheKho.DataSource = lstTonKho;          
@@ -104,10 +103,10 @@ namespace VisualStudio2019.Form
 
         private void Form_TheKho_Load(object sender, EventArgs e)
         {
-            GetTenSP();
+            //GetTenSP();
         }
 
-        private void btnTim_Click(object sender, EventArgs e)
+        private void BtnSearch_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             GetTheKho();
         }
